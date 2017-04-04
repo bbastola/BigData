@@ -1,0 +1,21 @@
+Flume
+
+login to itversity
+cd /opt/gen_logs
+ls -ltr
+tail_logs.sh stop_logs.sh start_logs.sh -> can be run from anywhere
+
+Flume:
+source - to read the data
+channel- to channel/trasfer data
+sink- target where data is being stored/dump
+
+cd kandf
+ls
+
+flume-ng version
+
+-----------------------------
+mkdir flume_labs
+cd flume_labs
+

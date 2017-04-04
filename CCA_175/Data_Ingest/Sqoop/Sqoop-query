@@ -1,0 +1,26 @@
+
+1. Listing rdbms databases using sqoop command
+
+sqoop list-databases \
+ --connect "jdbc:mysql://localhost:3306" \
+ --username=retail_dba \
+ --password=hadoop
+
+2. Running simple SQL query from sqoop
+
+sqoop eval \
+ --connect "jdbc:mysql://localhost:3306/retail_db" \
+ --username=retail_dba \
+ --password=hadoop \
+ --query "select * from departments"
+
+
+* we can also enter the password after the sqoop job has been executed
+
+sqoop eval \
+ --connect "jdbc:mysql://localhost:3306/retail_db" \
+ --username=retail_dba \
+ -P \
+ --query "select * from departments"
+
+here -P arguments will prompt you to enter the password

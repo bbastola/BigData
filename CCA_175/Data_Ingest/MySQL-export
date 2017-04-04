@@ -1,0 +1,6 @@
+MySQL-export
+
+Exporting data from Mysql
+
+select * from departments into outfile /user/bbastola/ 
+fields terminated by ',' lines terminated by '\n';

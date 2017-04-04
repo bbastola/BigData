@@ -1,0 +1,18 @@
+Big Data Workshop -07- HDFS Briefly
+
+To see how the files are stored in HDFS
+1. Go to namenode url : nn01.itversity.com:50070
+utitlities -> browse the file system --> click on file
+
+2. command to see details about the files stored in HDFS
+hdfs fsck /(path of file/directory name) -files -blocks -locations
+
+configuration files are located under:
+etc/hadoop/conf
+
+//we can change blocksize and replication factor during runtime without messiing with conf file.
+
+hadoop fs -Ddfs.blocksize=67108864 -Ddfs.replication=1 -copyFromLocal filename /user/username/location
+
+//change the replication factor of existing file. it will have to copy the file again so it will take some time.
+hadoop fs -setrep 2 /user/bbastola/cards 

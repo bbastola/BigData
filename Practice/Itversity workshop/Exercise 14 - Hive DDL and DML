@@ -1,0 +1,187 @@
+Itversity Forum: Exercise 14 - Hive DDL and DML
+
+Description
+----------------
+- We will be creating several hive tables using different file formats, delimiters and partitioning strategy
+- Also we will be loading data into these hive tables
+- Data Location
+   HDFS - /public/retail_db
+   Local - /data/retail_db
+- To get data types visit mysql database retail_db using user retail_dba
+
+Problem Statement
+-------------------
+1. Make sure you have 2 databases with your OS User name and then stage and final as suffix
+   example: username_stage, username_final
+2. username_stage - Create external tables in username_stage pointing to HDFS location /public/retail_db
+3. username_stage - Make sure at least one table point to different location and use load command to load data from local file system into the hive table
+4. username_final - Create all 6 tables in hive as managed tables, delimiter is "|", also use gzip compression while storing the data
+5. Also create 2 additional tables for orders and order_items where both tables are bucketed by order_id
+6. Create another table for orders where data is partitioned by order_month
+
+Solution:
+
+1. Make sure you have 2 databases with your OS User name and then stage and final as suffix
+create database bbastola_stage;
+create database bbastola_final;
+
+2. Create external tables in bbastola_stage pointing to HDFS location /public/retail_db
+
+use bbastola_stage;
+
+CREATE EXTERNAL TABLE categories (
+category_id Int,
+category_department_id Int,
+category_name String )
+ROW FORMAT DELIMITED 
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+LOCATION '/user/bbastola/data/retail_db';
+
+//we have to specify delimiter because default mysql field(, "it's a comma") and hive field delimiters(\u0001 "it's a null character") are different. But
+both mysql and hive have same line delimiter(\n 'New line')
+
+CREATE EXTERNAL TABLE customers (
+customer_id Int,
+customer_fname String,
+customer_lname String,
+customer_email String,
+customer_password String,
+customer_street String,
+customer_city String,
+customer_state String,
+customer_zipcode String)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+LOCATION '/user/bbastola/data/retail_db';
+
+3. Make sure at least one table point to different location and use load command to load data from local file system into the hive table
+
+CREATE EXTERNAL TABLE departments (
+department_id Int,
+department_name String)
+ROW FORMAT DELIMITED 
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+LOCATION '/user/bbastola/test';
+
+LOAD DATA LOCAL INPATH '/home/bbastola/Dataset/retail_db/departments/departments.txt' INTO TABLE departments;
+
+4. Create all 6 tables in hive as managed tables, delimiter is "|", also use gzip compression while storing the data
+
+use bbastola_final;
+
+NOTE: We can't compress the data directly by loading into hive managed table. There is a two step process:
+
+i. Create temp table and load data into it.
+
+CREATE TABLE categories_tmp(
+category_id Int,
+category_department_id Int,
+category_name String )
+STORED AS TEXTFILE
+ROW FORMAT DELIMITED 
+FIELDS TERMINATED BY '|';
+
+LOAD DATA LOCAL INPATH '/home/bbastola/Dataset/retail_db/categories/categories.txt' INTO TABLE categories_tmp;
+//make sure the file categories.txt has '|' field delimiter while you imported using sqoop.
+
+ii. setup compress properties in shell(if not setup in properties file), then create another table and import the data from temp table using CTAS(create table as select)
+
+set hive.exec.compress.output=true;
+set mapreduce.output.fileoutputformat.compress.codec=org.apache.hadoop.io.compress.GzipCodec;
+set hive.exec.compress.intermediate=true;
+
+CREATE TABLE categories(
+category_id Int,
+category_department_id Int,
+category_name String )
+STORED AS TEXTFILE
+ROW FORMAT DELIMITED 
+FIELDS TERMINATED BY '|'
+AS SELECT * FROM categories_tmp;
+
+Check the location of the data:
+dfs -ls /apps/hive/warehouse/bbastola_final.db/categories/
+
+--The location should have the data in compressed format.
+
+5. Also create 2 additional tables for orders and order_items where both tables are bucketed by order_id
+	
+CREATE TABLE orders_bucket (
+order_id Int,
+order_date String
+order_customer_id Int,
+order_status String)
+CLUSTERED BY (order_id) into 8 buckets
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+Now lets load the data
+
+INSERT INTO TABLE orders_bucket
+SELECT order_id, order_date, order_customer_id, order_status from orders;
+
+
+CREATE TABLE order_items_bucket (
+order_id Int,
+order_date String
+order_customer_id Int,
+order_status String)
+CLUSTERED BY (order_items_order_id) into 8 buckets
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+Now lets load the data
+
+INSERT INTO TABLE orders_items_bucket
+SELECT order_id, order_date, order_customer_id, order_status from orders;
+
+6. Create another table for orders where data is partitioned by order_month
+
+i. First let's create a orders table and load it with actual data(NO partition)
+
+CREATE TABLE orders (
+order_id Int,
+order_date String
+order_customer_id Int,
+order_status String)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+LOAD DATA LOCAL INPATH '/home/bbastola/Dataset/retail_db/orders/orders.txt' INTO TABLE orders;
+
+ii. Now let's create a partitioned table.
+
+CREATE TABLE orders_partitionedByMonth (
+order_id Int,
+order_date String
+order_customer_id Int,
+order_status String)
+PARTITIONED BY(
+order_month String)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+//The following two properties is MANDATORY
+set.hive.exec.dynamic.partition=true;
+set.hive.exec.dynamic.mode=nonstrict;
+
+INSERT INTO TABLE orders_partitionedByMonth
+PARTITION (order_month)
+SELECT t.*, distinct cast(substr(order_date, 1, 7) as Int) order_month
+from orders t;
+
+
+
+
+
+
+
+
+

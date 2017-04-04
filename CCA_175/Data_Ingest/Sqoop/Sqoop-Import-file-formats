@@ -1,0 +1,39 @@
+
+1. Importing individual tables from MySql database to HDFS as text file (default format)
+
+sqoop import \
+--options-file connection.props \
+--table-customers \
+--target-dir=/user/bbastola/Dataset/file_formats/astext
+--as-textfile \
+
+2. Importing individual tables from MySql database to HDFS as sequence file (Binary)
+
+sqoop import \
+--options-file connection.props \
+--table-customers \
+--target-dir=/user/bbastola/Dataset/file_formats/assequence
+--as-sequencefile
+
+3. Importing individual tables from MySql database to HDFS as Parquet file
+
+sqoop import \
+--options-file connection.props \
+--table-customers \
+--target-dir=/user/bbastola/Dataset/file_formats/asparquet
+--as-parquetfile \
+-m 5
+
+4. Importing individual tables from MySql database to HDFS as avro file
+
+sqoop import -Dmapreduce.job.user.classpath.first=true \
+--options-file connection.props \
+--table customers \
+--target-dir=/user/bbastola/Dataset/file_formats/asavro \
+--as-avrodatafile 
+
+(Note: we have to use -Dmapreduce.job.user.classpath.first=true argument here because, Sqoop uses 1.8.0 of avro and there are other Hadoop components
+using 1.7.5 or 1.7.4 avro.)
+source: https://community.hortonworks.com/questions/60890/sqoop-import-to-avro-failing-which-jars-to-be-used.html
+
+

@@ -1,0 +1,57 @@
+Spark and Scala workshop - GroupBy, SortBy, Rankings
+
+Two types of sorting - globally and by key(departments for eg in a company)
+global - sorting done on large dataset, also called total sorting. it's single threaded - disadvantage
+key- sorting done by key is more efficient. used more often than global sorting
+
+global sorting can be done by applying action in most cases, without applying transformation
+globar sorting api's :
+
+top
+takeordered
+soryByKey
+
+Example 1 (top): from the products table find out the top 5 expensive product.
+
+1. val products = sc.textFile("/user/bbastola/retail_db/products")
+2. val productsMap = products.map(rec => (rec.split(",")(4).toDouble, rec.split(",")(2))).sortByKey(false) //fetching product price as key and name as value for processin and sorting by descending order
+3. val finalResults = productsMap.top(5).foreach(println) //printing top 5 results
+
+Example 2 (takeordered): from the products table find out the top 5 expensive products (This is a preferred way)
+
+1. val products = sc.textFile("/user/bbastola/retail_db/products").filter(rec => rec.split(",")(4) != "") //loading the data and filtering data with no null value on price colume)
+2. val productsTakeOrdered = products.takeOrdered(5).foreach(println) //it will print the record in ascending order of alphanumeric character.
+//the above line doesn't work with our requirement so we have to customize the api (takeOrdered)
+3. val productsTakeOrdered = products.takeOrdered(5)(Ordering[Double].on(rec => -rec.split(",")(4).toDouble)).foreach(println) //Ordering is a scala class, on is a function and -rec means descending order
+
+Example 3 (sortByKey): from the products table print the products price(desending) and it's category id(ascending). 
+1. first you have to create a key by using map function
+val products = sc.textFile("/user/bbastola/retail_db/products").filter(rec => rec.split(",")(4) != "").map(rec => {
+	val r = rec.split(",") //it will split the data into an array
+	((r(1).toInt, -r(4).toDouble), rec) //we're creating a tuple with key and value. Here we're creating composite key and whole record as value. -r will give descending value
+})
+2. prodcutsSortByKey = products.sortByKey().collect().foreach(println) //sorting using category id(1) and price(4) as key in descending order
+
+
+* Next use case is a little different from above. We have to get top 5 products by price within each product category.
+
+1. We load the product table and remove the bad record.
+	val products = sc.textFile("/user/bbastola/retail_db/products").filter(rec => rec.split(",")(4) != "")
+2. fetch only needed columns. We need product_category_id(index 1), entire record for transformation later down the road
+	val productsMap = products.map(rec => (rec.split(".")(1), rec))
+3. load the categories table and fetch the needed columns (category_id, category_name)
+	val categoriesMap =  sc.textFile("/user/bbastola/retail_db/categories").map(rec => (rec.split(",")(0), rec.split(",")(1))
+4. Now we join those two objects
+	val productCategories = productsMap.join(categoriesMap)
+5. we then fetch only columns we need further (Here we're making categories name as a key and entire product rec as value)
+	val productsCategoriesMap = productsCategories.map(rec => (rec._2._2,rec._2._1))
+6. now we have to groupByKey
+	val prodCatGroupBy = productsCategoriesMap.groupByKey()
+
+
+def topNProd(rec: (String, Iterable[String]), topN: Int): Iterable[(String, String)]= {
+rec._2.toList.sortBy(k =>(-k.split(",")(4).toFloat)).take(topN).map(r => (rec._1, r))
+}
+
+val finalResult = prodCatMapGbk.flatMap(rec => topNProd(rec, 5))
+

@@ -1,0 +1,6 @@
+Job Execution life cycle
+
+Executor - it's a jvm. it will create task to process data
+default executor memory - 1gb, default core - 1
+Executor will balance the load between number of tasks
+Task - it process data

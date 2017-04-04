@@ -1,0 +1,33 @@
+
+* We can make connection parameter file and pass the argument while running sqoop
+
+open text editor and type the following and save(locally NOT in hdfs) it with any name. In my case: connection.props
+
+---connect 
+jdbc:mysql://localhost:3306/retail_db
+--username
+retail_dba
+-P
+(make sure you enter those info on separate lines like above)
+
+1. We can run simple query to demostrate
+
+sqoop eval \
+ --options-file connection.props \
+ --query "select * from departments"
+
+* we can also make a password file and pass it as a parameter for security purpose
+
+- Go to Terminal and type => echo -n "password" > .password ("password" is your desired password, .password is the password file name)
+- Put the above file in hdfs location => hadoop fs -copyFromLocal .password /user/bbastola/
+- change the permission of the file => hadoop fs -chmod 400 /user/bbastola/.password
+- remove the orginal file from local system => rmf .password
+
+* Now let us run the sqoop job
+
+sqoop eval \
+--connect "jdbc:mysql://localhost:3306"
+--username=retail_dba
+--password-file /user/bbastola/.password
+--query "select * from departments"
+

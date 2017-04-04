@@ -1,0 +1,55 @@
+Sqoop-merge:
+
+- Data in HDFS/HIVE cannot be updated easily.
+- we can use sqoop merge to overcome this disadvantage.
+
+Sqoop Merge is a multi-step process
+
+1. Create a new directory
+hadoop fs -mkdir /user/bbastola/sqoop_merge
+
+2. Initian sqoop import
+sqoop import \
+--options-file connection.props \
+--table-departments \
+--target-dir=/user/bbastola/sqoop_merge/departments
+--as-textfile \
+
+3. Update/insert records into your MySQL database
+sqoop eval \
+--options-file connection.props \
+--query "update department_name = 'Testing Merge' where department_id = 9000" 
+
+sqoop eval \
+--options-file connection.props \
+--query "insert into departments values (10000, 'Inserting for merge')" 
+
+4. Import tablet into new folder(Delta)
+sqoop import \
+--options-file connection.props \
+--table-departments \
+--target-dir=/user/bbastola/sqoop_merge/departments_delta
+--where "department_id >= 9000"
+
+5. Now we have to merge those two folders (departments and departments_delta)
+sqoop merge \
+--merge-key department_id \
+--new-data /user/bbastola/sqoop_merge/departments_delta \
+--onto /user/bbastola/sqoop_merge/departments \
+--target-dir=/user/bbastola/sqoop_merge/departments_stage \
+--class-name departments \
+--jar-file <jar_file_location>
+//merge-key needs to be primary key
+//target-dir here needs to be a new folder where the contents of the merge will be dumped. It will create itself
+//class-name is usually the table name
+//jar-file location can be retrieved by following ways:
+	on a new hadoop shell--> cd java_files --> ls --> view departments.java --> location of jar will be displayed in the content
+
+6. Delete old directories ( department and department_delta)
+hadoop fs -rm -R /user/bbastola/sqoop_merge/departments
+hadoop fs -rm -R /user/bbastola/sqoop_merge/departments_delta
+
+7. move/rename departments_stage to original directory
+hadoop fs -mv /user/bbastola/sqoop_merge/departments_stage /user/bbastola/sqoop_merge/departments
+
+******************************** DONE *************************************************

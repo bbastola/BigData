@@ -1,0 +1,99 @@
+HBase commands:
+
+* General commands
+-------------------------------------------------------------------
+1. Status - it will return the status of the system including the details of the  servers running on the system 
+status
+2. version - It returns the version of the HBase used in your system
+version
+3. table_help - It will guide you what command and how to use it
+table_help
+4. whoami - It returns the user details of HBase
+whoami
+-------------------------------------------------------------------
+
+1. start hbase
+hbase shell
+
+2. check to see if the table exists
+exists 'tablename'
+
+3. create namespace:table,columnfamilyname //namespace used in multiuser environment or for better naming convention
+create 'bbastola:customer','Personal data','address'
+
+4. show tables
+list
+
+* to rename a table name:
+
+disable 'bbastola:customer'
+snapshot 'bbastola:customer', 'bbastola:customers'
+clone_snapshot 'bbastola:customer', 'bbastola:customers'
+delete_snapshot 'bbastola:customer'
+drop 'bbastola:customer'
+
+
+5. Describe table
+describe 'bbastola:customers'
+
+6. If the table needs to be deleted or dropped, it has to be disabled first
+disable 'bbastola:customers'
+
+7. we can enable the table if we didn't drop
+enable 'bbastola:customers'
+
+8. Display all the filters present in HBase
+show_filters
+
+9. drop table -> But first you have to disable it then once disable you can drop it
+disable 'customers'
+drop 'customers'
+
+10. check to see if the table is enabled or disabled
+is_enabled 'customers'
+
+11. to see the content of the table 
+scan 'bbastola:customers'
+
+12. alter - command to make changes to an existing table
+12. versions - this argument controls the min/max number of cells allowed in a particular column family
+alter 'bbastola:customers' , Name => 'Personal data', VERSIONS => 5
+
+13. command to make the table ready only
+alter 'bbastola:customers', READONLY
+
+14. Delete a column family
+alter 'bbastola"customers', 'delete' => 'address'
+
+---------------------------------------------------------------------------
+Inserting data into table:
+
+put 'bbastola:customers', '1', 'Personal data:Fname', 'Wayne'
+put 'bbastola:customers', '1', 'Personal data:Lname', 'Rooney'
+put 'bbastola:customers', '1', 'Personal data:Age', '20'
+put 'bbastola:customers', '1', 'address:City', 'Franklin'
+put 'bbastola:customers', '1', 'address:State', 'Teneese'
+put 'bbastola:customers', '2', 'Personal data:Fname', 'Andy'
+put 'bbastola:customers', '2', 'Personal data:Lname', 'Herrera'
+put 'bbastola:customers', '2', 'Personal data:Age', '25'
+put 'bbastola:customers', '2', 'address:City', 'Dallas'
+put 'bbastola:customers', '2', 'address:State', 'Texas'
+
+To see individual record:
+get 'bbastola:customers', '1', {COLUMN => 'Personal Data:FirstName'}
+---------------------------------------------------------------------------
+
+ITversity notes:
+
+1. create namespace
+create_namespace 'bbastola'
+
+list_namespace
+list_namespace_tables 'bbastola'
+create 'bbastola:emp', 'ed'
+
+put 'bbastola:emp', 1, 'ed:name', 'DG'
+scan 'bbastola:emp'
+scan 'bbastola:emp' , {COLUMNS => ['ed:name', 'ed:addr']}
+get 'bbastola:emp', 1
+

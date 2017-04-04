@@ -1,0 +1,18 @@
+2. Importing all tables from Mysql database using compression + excluding few tables
+
+sqoop import-all-tables \
+--options-file connection.props \
+--warehouse-dir=/user/bbastola/Dataset/ \
+--compress \
+--compression-codec org.apache.hadoop.io.compress.GzipCodec \
+--exclude-tables orders,order_items \
+-m 6
+
+//Here we have used exclude-tables argument to excluse two tables(there shoudldn't be any space between two tables) while importing all tables. 
+//Here we have used Gzip compression. There are several other compression codecs that we can use:
+org.apache.hadoop.io.compress.DefaultCodec
+org.apache.hadoop.io.compress.BZip2Codec
+org.apache.hadoop.io.compress.SnappyCodec
+
+//You can use the following command to check first 20 records of the result:
+hadoop fs -cat /user/bbastola/Dataset/categories/part* | zcat | head -n 20

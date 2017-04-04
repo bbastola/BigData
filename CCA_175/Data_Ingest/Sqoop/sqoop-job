@@ -1,0 +1,26 @@
+Sqoop job: 
+Creating a job with predefined arguments and running it afterwards. It's like a script in linux/batch files in windows.
+
+
+sqoop job 
+--create job_name 
+-- import 
+--connect jdbc:mysql://localhost:3306/retail_db 
+--username retail_dba 
+--password hadoop
+--table order_items 
+--target-dir /user/bbastola/Dataset/sqoop_import/mysql_order_items 
+ 
+ //Note: space between -- and import is mandatory.(-- import)
+*job_name is the name of this sqoop job. You can give any new name.
+
+* Command to list existing job is:
+sqoop job --list
+
+* To see details of the job:
+sqoop job --show job_name
+//if you get prompted for password then use your MySql password
+
+* To run sqoop job:
+sqoop job --exec job_name
+
