@@ -1,19 +1,18 @@
 [debug] Other repositories:
 [debug] Default repositories:
 [debug] Using inline dependencies specified in Scala.
-[debug] :: resolving dependencies :: default#daily_revenue$sbt_2.10;1.0
+[debug] :: resolving dependencies :: daily_revenue#daily_revenue$sbt_2.10;1.0
 [debug] 	confs: [default]
 [debug] 	validate = true
 [debug] 	refresh = false
 [debug] resolving dependencies for configuration 'default'
-[debug] == resolving dependencies for default#daily_revenue$sbt_2.10;1.0 [default]
-[debug] == resolving dependencies default#daily_revenue$sbt_2.10;1.0->org.scala-sbt#sbt;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies for daily_revenue#daily_revenue$sbt_2.10;1.0 [default]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sbt_2.10;1.0->org.scala-sbt#sbt;0.13.13 [default->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default(compile)]}
 [info] Resolving org.scala-sbt#sbt;0.13.13 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#sbt;0.13.13 {default=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#sbt;0.13.13
 [debug] 	found org.scala-sbt#sbt;0.13.13 in sbt-chain
-[debug] no default cache defined: set to /Users/bbastola/.ivy2/cache
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]}
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.13->org.scala-lang#scala-library;2.10.6 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]}
@@ -251,6 +250,7 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#control;0.13.13 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#control;0.13.13
 [debug] 	found org.scala-sbt#control;0.13.13 in sbt-chain
+[debug] no default cache defined: set to /Users/bbastola/.ivy2/cache
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]}
 [debug] == resolving dependencies org.scala-sbt#control;0.13.13->org.scala-lang#scala-library;2.10.6 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]}
@@ -1772,7 +1772,7 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {provided=[default(compile)]} => dependency: org.scala-lang#scala-compiler;2.10.6 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]}
-[debug] == resolving dependencies default#daily_revenue$sbt_2.10;1.0->com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sbt_2.10;1.0->com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 [default->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default(compile)]}
 [info] Resolving com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 {default=[default(compile)]}
@@ -1841,18 +1841,18 @@
 [debug] == resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-effect_2.10;7.1.0 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] == resolving dependencies default#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sbt_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sbt_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sbt_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sbt_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sbt_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sbt_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sbt_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sbt_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sbt_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->master]
 [debug] ignoring unhandled DependencyDescriptorMediator: class sbt.IvyScala$OverrideScalaMediator
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
@@ -1911,17 +1911,17 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.13!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] :: resolution report :: resolve 2132ms :: artifacts dl 103ms
-[debug] 	report for default#daily_revenue$sbt_2.10;1.0 default produced in /Users/bbastola/Documents/Github/Daily_revenue/target/resolution-cache/reports/default-daily_revenue$sbt_2.10-default.xml
-[debug] 	resolve done (2132ms resolve - 103ms download)
+[debug] :: resolution report :: resolve 858ms :: artifacts dl 45ms
+[debug] 	report for daily_revenue#daily_revenue$sbt_2.10;1.0 default produced in /Users/bbastola/Documents/Github/Spark Projects/Spark_Core_Daily_revenue/target/resolution-cache/reports/daily_revenue-daily_revenue$sbt_2.10-default.xml
+[debug] 	resolve done (858ms resolve - 45ms download)
 [debug] Using inline dependencies specified in Scala.
-[debug] :: resolving dependencies :: default#daily_revenue$sources_2.10;1.0
+[debug] :: resolving dependencies :: daily_revenue#daily_revenue$sources_2.10;1.0
 [debug] 	confs: [default]
 [debug] 	validate = true
 [debug] 	refresh = false
 [debug] resolving dependencies for configuration 'default'
-[debug] == resolving dependencies for default#daily_revenue$sources_2.10;1.0 [default]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#main;0.13.13 [default->compile]
+[debug] == resolving dependencies for daily_revenue#daily_revenue$sources_2.10;1.0 [default]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#main;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -1929,8 +1929,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#main;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#main;0.13.13
 [debug] 	found org.scala-sbt#main;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#main;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#io;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#main;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#io;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -1938,8 +1938,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#io;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#io;0.13.13
 [debug] 	found org.scala-sbt#io;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#io;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#compiler-ivy-integration;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#io;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#compiler-ivy-integration;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -1947,8 +1947,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#compiler-ivy-integration;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#compiler-ivy-integration;0.13.13
 [debug] 	found org.scala-sbt#compiler-ivy-integration;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#compiler-ivy-integration;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#classpath;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#compiler-ivy-integration;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#classpath;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -1956,8 +1956,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#classpath;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#classpath;0.13.13
 [debug] 	found org.scala-sbt#classpath;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#classpath;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->master(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#classpath;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -1965,14 +1965,14 @@
 [debug] sbt-chain: Checking cache for: dependency: org.fusesource.jansi#jansi;1.11 {default=[master(*), compile, runtime(*), runtime, compile(*), master]}
 [debug] sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.11
 [debug] 	found org.fusesource.jansi#jansi;1.11 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->runtime(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->compile(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#run;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->runtime(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->compile(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.fusesource.jansi#jansi;1.11 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#run;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -1980,8 +1980,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#run;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#run;0.13.13
 [debug] 	found org.scala-sbt#run;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#run;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#logic;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#run;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#logic;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -1989,8 +1989,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#logic;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#logic;0.13.13
 [debug] 	found org.scala-sbt#logic;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#logic;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->master(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#logic;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -1998,14 +1998,14 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scalamacros#quasiquotes_2.10;2.0.1 {default=[master(*), compile, runtime(*), runtime, compile(*), master]}
 [debug] sbt-chain: module revision found in cache: org.scalamacros#quasiquotes_2.10;2.0.1
 [debug] 	found org.scalamacros#quasiquotes_2.10;2.0.1 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->runtime(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->compile(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#cross;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->runtime(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->compile(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalamacros#quasiquotes_2.10;2.0.1 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#cross;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2013,8 +2013,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#cross;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#cross;0.13.13
 [debug] 	found org.scala-sbt#cross;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#cross;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->default]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#cross;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->default]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2022,18 +2022,18 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#serialization_2.10;0.1.2 {default=[default, compile, runtime, default(compile), master]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#serialization_2.10;0.1.2
 [debug] 	found org.scala-sbt#serialization_2.10;0.1.2 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->master(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#serialization_2.10;0.1.2 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2041,14 +2041,14 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-pickling_2.10;0.10.1 {default=[master(*), compile, runtime(*), runtime, compile(*), master]}
 [debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-pickling_2.10;0.10.1
 [debug] 	found org.scala-lang.modules#scala-pickling_2.10;0.10.1 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->runtime(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->compile(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#persist;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->runtime(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->compile(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang.modules#scala-pickling_2.10;0.10.1 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#persist;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2056,8 +2056,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#persist;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#persist;0.13.13
 [debug] 	found org.scala-sbt#persist;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#persist;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#compiler-interface;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#persist;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#compiler-interface;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2065,8 +2065,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#compiler-interface;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#compiler-interface;0.13.13
 [debug] 	found org.scala-sbt#compiler-interface;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#compiler-interface;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#collections;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#compiler-interface;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#collections;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2074,8 +2074,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#collections;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#collections;0.13.13
 [debug] 	found org.scala-sbt#collections;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#collections;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->default]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#collections;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->default]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2083,18 +2083,18 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scalaz#scalaz-effect_2.10;7.1.0 {default=[default, compile, runtime, default(compile), master]}
 [debug] sbt-chain: module revision found in cache: org.scalaz#scalaz-effect_2.10;7.1.0
 [debug] 	found org.scalaz#scalaz-effect_2.10;7.1.0 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#main-settings;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-effect_2.10;7.1.0 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#main-settings;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2102,8 +2102,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#main-settings;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#main-settings;0.13.13
 [debug] 	found org.scala-sbt#main-settings;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#main-settings;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#relation;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#main-settings;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#relation;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2111,8 +2111,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#relation;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#relation;0.13.13
 [debug] 	found org.scala-sbt#relation;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#relation;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#tasks;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#relation;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#tasks;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2120,8 +2120,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#tasks;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#tasks;0.13.13
 [debug] 	found org.scala-sbt#tasks;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#tasks;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->master(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#tasks;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2130,22 +2130,22 @@
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.10.6
 [debug] 	found org.scala-lang#scala-reflect;2.10.6 in sbt-chain
 [debug] 	[2.10.6] org.scala-lang#scala-reflect;2.10.6
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->default]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->runtime(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->compile(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#task-system;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->default]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->runtime(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->compile(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#task-system;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2153,8 +2153,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#task-system;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#task-system;0.13.13
 [debug] 	found org.scala-sbt#task-system;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#task-system;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->default]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#task-system;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->default]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2162,18 +2162,18 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 {default=[default, compile, runtime, default(compile), master]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6
 [debug] 	found org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->default]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt.ivy#ivy;2.3.0-sbt-2cf13e211b2cb31f0d3b317289dca70eca3362f6 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->default]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2181,18 +2181,18 @@
 [debug] sbt-chain: Checking cache for: dependency: jline#jline;2.13 {default=[default, compile, runtime, default(compile), master]}
 [debug] sbt-chain: module revision found in cache: jline#jline;2.13
 [debug] 	found jline#jline;2.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->default]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->jline#jline;2.13 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->default]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2200,22 +2200,22 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scalaz#scalaz-core_2.10;7.1.0 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] sbt-chain: module revision found in cache: org.scalaz#scalaz-core_2.10;7.1.0
 [debug] 	found org.scalaz#scalaz-core_2.10;7.1.0 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->runtime(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->master(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->compile(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#control;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->runtime(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->master(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->compile(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scalaz#scalaz-core_2.10;7.1.0 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#control;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2223,8 +2223,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#control;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#control;0.13.13
 [debug] 	found org.scala-sbt#control;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#control;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#actions;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#control;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#actions;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2232,8 +2232,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#actions;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#actions;0.13.13
 [debug] 	found org.scala-sbt#actions;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#actions;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->master(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#actions;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2241,14 +2241,14 @@
 [debug] sbt-chain: Checking cache for: dependency: org.json4s#json4s-core_2.10;3.2.10 {default=[master(*), compile, runtime(*), runtime, compile(*), master]}
 [debug] sbt-chain: module revision found in cache: org.json4s#json4s-core_2.10;3.2.10
 [debug] 	found org.json4s#json4s-core_2.10;3.2.10 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->runtime(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->compile(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#testing;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->runtime(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->compile(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-core_2.10;3.2.10 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#testing;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2256,8 +2256,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#testing;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#testing;0.13.13
 [debug] 	found org.scala-sbt#testing;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#testing;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#process;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#testing;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#process;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2265,8 +2265,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#process;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#process;0.13.13
 [debug] 	found org.scala-sbt#process;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#process;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#command;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#process;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#command;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2274,8 +2274,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#command;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#command;0.13.13
 [debug] 	found org.scala-sbt#command;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#command;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#cache;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#command;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#cache;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2283,8 +2283,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#cache;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#cache;0.13.13
 [debug] 	found org.scala-sbt#cache;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#cache;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#tracking;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#cache;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#tracking;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2292,8 +2292,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#tracking;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#tracking;0.13.13
 [debug] 	found org.scala-sbt#tracking;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#tracking;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#ivy;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#tracking;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#ivy;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2301,8 +2301,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#ivy;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#ivy;0.13.13
 [debug] 	found org.scala-sbt#ivy;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#ivy;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->master(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#ivy;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2310,14 +2310,14 @@
 [debug] sbt-chain: Checking cache for: dependency: org.spire-math#jawn-parser_2.10;0.6.0 {default=[master(*), compile, runtime(*), runtime, compile(*), master]}
 [debug] sbt-chain: module revision found in cache: org.spire-math#jawn-parser_2.10;0.6.0
 [debug] 	found org.spire-math#jawn-parser_2.10;0.6.0 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->runtime(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->compile(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#compile;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->runtime(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->compile(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#jawn-parser_2.10;0.6.0 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#compile;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2325,8 +2325,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#compile;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#compile;0.13.13
 [debug] 	found org.scala-sbt#compile;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#compile;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#compiler-integration;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#compile;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#compiler-integration;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2334,8 +2334,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#compiler-integration;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#compiler-integration;0.13.13
 [debug] 	found org.scala-sbt#compiler-integration;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#compiler-integration;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->master(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#compiler-integration;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2343,14 +2343,14 @@
 [debug] sbt-chain: Checking cache for: dependency: org.json4s#json4s-ast_2.10;3.2.10 {default=[master(*), compile, runtime(*), runtime, compile(*), master]}
 [debug] sbt-chain: module revision found in cache: org.json4s#json4s-ast_2.10;3.2.10
 [debug] 	found org.json4s#json4s-ast_2.10;3.2.10 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->runtime(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->compile(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->default]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->runtime(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->compile(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.json4s#json4s-ast_2.10;3.2.10 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->default]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2359,23 +2359,23 @@
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.6
 [debug] 	found org.scala-lang#scala-library;2.10.6 in sbt-chain
 [debug] 	[2.10.6] org.scala-lang#scala-library;2.10.6
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->master(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->runtime(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->master(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->compile(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->default]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->master(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->runtime(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->master(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->compile(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->default]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2383,18 +2383,18 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#launcher-interface;1.0.0-M1 {default=[default, compile, runtime, default(compile), master]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#launcher-interface;1.0.0-M1
 [debug] 	found org.scala-sbt#launcher-interface;1.0.0-M1 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#sbt;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#launcher-interface;1.0.0-M1 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#sbt;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2402,8 +2402,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#sbt;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#sbt;0.13.13
 [debug] 	found org.scala-sbt#sbt;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#sbt;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->default]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#sbt;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->default]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2411,18 +2411,18 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#template-resolver;0.1 {default=[default, compile, runtime, default(compile), master]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#template-resolver;0.1
 [debug] 	found org.scala-sbt#template-resolver;0.1 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-tools.sbinary#sbinary_2.10;0.4.2 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#template-resolver;0.1 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-tools.sbinary#sbinary_2.10;0.4.2 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2430,8 +2430,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-tools.sbinary#sbinary_2.10;0.4.2 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-tools.sbinary#sbinary_2.10;0.4.2
 [debug] 	found org.scala-tools.sbinary#sbinary_2.10;0.4.2 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-tools.sbinary#sbinary_2.10;0.4.2 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#api;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-tools.sbinary#sbinary_2.10;0.4.2 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#api;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2439,8 +2439,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#api;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#api;0.13.13
 [debug] 	found org.scala-sbt#api;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#api;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#incremental-compiler;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#api;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#incremental-compiler;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2448,8 +2448,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#incremental-compiler;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#incremental-compiler;0.13.13
 [debug] 	found org.scala-sbt#incremental-compiler;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#incremental-compiler;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#apply-macro;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#incremental-compiler;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#apply-macro;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2457,8 +2457,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#apply-macro;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#apply-macro;0.13.13
 [debug] 	found org.scala-sbt#apply-macro;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#apply-macro;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->master(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#apply-macro;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2466,14 +2466,14 @@
 [debug] sbt-chain: Checking cache for: dependency: org.spire-math#json4s-support_2.10;0.6.0 {default=[master(*), compile, runtime(*), runtime, compile(*), master]}
 [debug] sbt-chain: module revision found in cache: org.spire-math#json4s-support_2.10;0.6.0
 [debug] 	found org.spire-math#json4s-support_2.10;0.6.0 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->runtime(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->compile(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->master(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->runtime(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->compile(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.spire-math#json4s-support_2.10;0.6.0 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->master(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2481,14 +2481,14 @@
 [debug] sbt-chain: Checking cache for: dependency: com.thoughtworks.paranamer#paranamer;2.6 {default=[master(*), compile, runtime(*), runtime, compile(*), master]}
 [debug] sbt-chain: module revision found in cache: com.thoughtworks.paranamer#paranamer;2.6
 [debug] 	found com.thoughtworks.paranamer#paranamer;2.6 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->runtime(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->compile(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-agent;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->runtime(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->compile(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.thoughtworks.paranamer#paranamer;2.6 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-agent;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2496,8 +2496,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#test-agent;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#test-agent;0.13.13
 [debug] 	found org.scala-sbt#test-agent;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-agent;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#classfile;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-agent;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#classfile;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2505,8 +2505,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#classfile;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#classfile;0.13.13
 [debug] 	found org.scala-sbt#classfile;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#classfile;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#completion;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#classfile;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#completion;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2514,8 +2514,8 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#completion;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#completion;0.13.13
 [debug] 	found org.scala-sbt#completion;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#completion;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->default]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#completion;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->default]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2523,18 +2523,18 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#test-interface;1.0 {default=[default, compile, runtime, default(compile), master]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#test-interface;1.0
 [debug] 	found org.scala-sbt#test-interface;1.0 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->default]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#test-interface;1.0 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->default]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2542,18 +2542,18 @@
 [debug] sbt-chain: Checking cache for: dependency: com.jcraft#jsch;0.1.50 {default=[default, compile, runtime, default(compile), master]}
 [debug] sbt-chain: module revision found in cache: com.jcraft#jsch;0.1.50
 [debug] 	found com.jcraft#jsch;0.1.50 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->default]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->com.jcraft#jsch;0.1.50 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->default]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2561,22 +2561,22 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.10.6
 [debug] 	found org.scala-lang#scala-compiler;2.10.6 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->master(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->runtime(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->runtime]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->compile]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->compile(*)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->master]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#interface;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->master(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->runtime(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->runtime]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->compile(*)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [default->master]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#interface;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2585,8 +2585,8 @@
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#interface;0.13.13
 [debug] 	found org.scala-sbt#interface;0.13.13 in sbt-chain
 [debug] 	[0.13.13] org.scala-sbt#interface;0.13.13
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#interface;0.13.13 [default->default(compile)]
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#logging;0.13.13 [default->compile]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#interface;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#logging;0.13.13 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master]}
@@ -2594,7 +2594,7 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#logging;0.13.13 {default=[compile, default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#logging;0.13.13
 [debug] 	found org.scala-sbt#logging;0.13.13 in sbt-chain
-[debug] == resolving dependencies default#daily_revenue$sources_2.10;1.0->org.scala-sbt#logging;0.13.13 [default->default(compile)]
+[debug] == resolving dependencies daily_revenue#daily_revenue$sources_2.10;1.0->org.scala-sbt#logging;0.13.13 [default->default(compile)]
 [debug] ignoring unhandled DependencyDescriptorMediator: class sbt.IvyScala$OverrideScalaMediator
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
@@ -2652,6 +2652,6 @@
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.6!scala-compiler.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#interface;0.13.13!interface.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#logging;0.13.13!logging.jar(src)
-[debug] :: resolution report :: resolve 472ms :: artifacts dl 54ms
-[debug] 	report for default#daily_revenue$sources_2.10;1.0 default produced in /Users/bbastola/Documents/Github/Daily_revenue/target/resolution-cache/reports/default-daily_revenue$sources_2.10-default.xml
-[debug] 	resolve done (472ms resolve - 54ms download)
+[debug] :: resolution report :: resolve 239ms :: artifacts dl 40ms
+[debug] 	report for daily_revenue#daily_revenue$sources_2.10;1.0 default produced in /Users/bbastola/Documents/Github/Spark Projects/Spark_Core_Daily_revenue/target/resolution-cache/reports/daily_revenue-daily_revenue$sources_2.10-default.xml
+[debug] 	resolve done (239ms resolve - 40ms download)

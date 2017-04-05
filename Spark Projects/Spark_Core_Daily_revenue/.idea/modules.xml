@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/daily_revenue.iml" filepath="$PROJECT_DIR$/.idea/modules/daily_revenue.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/daily_revenue-build.iml" filepath="$PROJECT_DIR$/.idea/modules/daily_revenue-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spark_core_daily_revenue.iml" filepath="$PROJECT_DIR$/.idea/modules/spark_core_daily_revenue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spark_core_daily_revenue-build.iml" filepath="$PROJECT_DIR$/.idea/modules/spark_core_daily_revenue-build.iml" />
     </modules>
   </component>
 </project>
