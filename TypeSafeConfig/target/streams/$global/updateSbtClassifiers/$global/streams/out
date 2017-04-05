@@ -12,6 +12,7 @@
 [info] Resolving org.scala-sbt#sbt;0.13.13 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#sbt;0.13.13 {default=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#sbt;0.13.13
+[debug] no default cache defined: set to /Users/bbastola/.ivy2/cache
 [debug] 	found org.scala-sbt#sbt;0.13.13 in sbt-chain
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]}
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.13->org.scala-lang#scala-library;2.10.6 [compile->default(compile)]
@@ -1910,9 +1911,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.13!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] :: resolution report :: resolve 2229ms :: artifacts dl 52ms
+[debug] :: resolution report :: resolve 2026ms :: artifacts dl 55ms
 [debug] 	report for default#typesafeconfig$sbt_2.10;1.0 default produced in /Users/bbastola/Documents/Github/TypeSafeConfig/target/resolution-cache/reports/default-typesafeconfig$sbt_2.10-default.xml
-[debug] 	resolve done (2229ms resolve - 52ms download)
+[debug] 	resolve done (2026ms resolve - 55ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#typesafeconfig$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -2651,6 +2652,6 @@
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.6!scala-compiler.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#interface;0.13.13!interface.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#logging;0.13.13!logging.jar(src)
-[debug] :: resolution report :: resolve 402ms :: artifacts dl 48ms
+[debug] :: resolution report :: resolve 424ms :: artifacts dl 44ms
 [debug] 	report for default#typesafeconfig$sources_2.10;1.0 default produced in /Users/bbastola/Documents/Github/TypeSafeConfig/target/resolution-cache/reports/default-typesafeconfig$sources_2.10-default.xml
-[debug] 	resolve done (402ms resolve - 48ms download)
+[debug] 	resolve done (424ms resolve - 44ms download)

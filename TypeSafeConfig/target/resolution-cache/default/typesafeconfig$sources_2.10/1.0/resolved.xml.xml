@@ -4,7 +4,7 @@
 		module="typesafeconfig$sources_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20170318132948"
+		publication="20170405115443"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>

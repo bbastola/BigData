@@ -4,7 +4,7 @@
 		module="daily_revenue$sbt_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20170325153546"
+		publication="20170405120040"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

@@ -49,7 +49,7 @@ Spark - Dataframes and SQL
 	Orders(r(0).toInt, r(1), r(2).toInt, r(3))
 }).toDF
 
-	val orderItemsDF = order_items.map(rec => {
+	val orderItemsDF = orderItems.map(rec => {
 	val r = rec.split(",")
 	OrderItems(r(0).toInt, r(1).toInt, r(2).toInt, r(3).toInt, r(4).toDouble, r(5).toDouble)
 	}).toDF
@@ -78,11 +78,11 @@ Now from above materials let's create a use case:
 
 1. lets create a df for filtered data
 
-	val ordersFiltered = ordersDF.filter(ordersDF("order_status") === "complete" or ordersDF("order_status") === "closed")
+	val ordersFiltered = ordersDF.filter(ordersDF("order_status") === "COMPLETE" or ordersDF("order_status") === "CLOSED")
 
 2. now we have to join two tables
 	
-	val ordersJoin = ordersFiltered.join(orderItemsDf, ordersFiltered("order_id") === orderItemsDF("order_items_order_id"))
+	val ordersJoin = ordersFiltered.join(orderItemsDf, ordersFiltered("order_id") === orderItemsDF("order_item_order_id"))
 
 3. ordersJoin.printSchema()
 
@@ -106,6 +106,20 @@ Now if you run that query again it will use only 4 partitions
 ----------------------------------------------------------------------------------------------------
 
 Now let's learn how to do this in spark sql rather than using dataframes
+
+1. First you have to register your DFs to temp table
+
+ordersDF.registerTempTable("orders")
+orderItemsDF.registerTempTable("order_items")
+
+2. Then run the query(s is important in the beginning of the query if your query spans to multiple lines)
+
+sqlContext.sql(s"select o.order_date, sum(oi.order_item_subtotal) daily_revenue " + "from orders o join order_items oi " +
+"on o.order_id = oi.order_item_order_id " + "where o.order_status = 'COMPLETE' or o.order_status = 'CLOSED' " + 
+"group by o.order_date " + "order by o.order_date").show()
+
+
+
 
 
 	
