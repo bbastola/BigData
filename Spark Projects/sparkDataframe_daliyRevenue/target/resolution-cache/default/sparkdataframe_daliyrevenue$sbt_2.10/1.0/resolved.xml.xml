@@ -4,7 +4,7 @@
 		module="sparkdataframe_daliyrevenue$sbt_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20170405132711"
+		publication="20170410123337"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

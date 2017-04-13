@@ -1,0 +1,25 @@
+[0m[[0minfo[0m] [0mPackaging /Users/bbastola/Documents/Github/Spark Projects/sparkDataframe_daliyRevenue/target/scala-2.10/sparkdataframe_daliyrevenue_2.10-1.0.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	application.properties[0m
+[0m[[0mdebug[0m] [0m	  /Users/bbastola/Documents/Github/Spark Projects/sparkDataframe_daliyRevenue/target/scala-2.10/classes/application.properties[0m
+[0m[[0mdebug[0m] [0m	OrderItems.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/bbastola/Documents/Github/Spark Projects/sparkDataframe_daliyRevenue/target/scala-2.10/classes/OrderItems.class[0m
+[0m[[0mdebug[0m] [0m	Orders$.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/bbastola/Documents/Github/Spark Projects/sparkDataframe_daliyRevenue/target/scala-2.10/classes/Orders$.class[0m
+[0m[[0mdebug[0m] [0m	dailyRevenue$$typecreator1$1.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/bbastola/Documents/Github/Spark Projects/sparkDataframe_daliyRevenue/target/scala-2.10/classes/dailyRevenue$$typecreator1$1.class[0m
+[0m[[0mdebug[0m] [0m	dailyRevenue$$anonfun$2.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/bbastola/Documents/Github/Spark Projects/sparkDataframe_daliyRevenue/target/scala-2.10/classes/dailyRevenue$$anonfun$2.class[0m
+[0m[[0mdebug[0m] [0m	Orders.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/bbastola/Documents/Github/Spark Projects/sparkDataframe_daliyRevenue/target/scala-2.10/classes/Orders.class[0m
+[0m[[0mdebug[0m] [0m	dailyRevenue$.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/bbastola/Documents/Github/Spark Projects/sparkDataframe_daliyRevenue/target/scala-2.10/classes/dailyRevenue$.class[0m
+[0m[[0mdebug[0m] [0m	dailyRevenue$$typecreator2$1.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/bbastola/Documents/Github/Spark Projects/sparkDataframe_daliyRevenue/target/scala-2.10/classes/dailyRevenue$$typecreator2$1.class[0m
+[0m[[0mdebug[0m] [0m	dailyRevenue.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/bbastola/Documents/Github/Spark Projects/sparkDataframe_daliyRevenue/target/scala-2.10/classes/dailyRevenue.class[0m
+[0m[[0mdebug[0m] [0m	OrderItems$.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/bbastola/Documents/Github/Spark Projects/sparkDataframe_daliyRevenue/target/scala-2.10/classes/OrderItems$.class[0m
+[0m[[0mdebug[0m] [0m	dailyRevenue$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/bbastola/Documents/Github/Spark Projects/sparkDataframe_daliyRevenue/target/scala-2.10/classes/dailyRevenue$$anonfun$1.class[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

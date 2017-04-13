@@ -1,0 +1,48 @@
+Aviation Data Analysis Using Apache Pig
+
+The U.S. Department of Transportation’s (DOT) Bureau of Transportation Statistics (BTS) tracks the on-time performance of domestic flights operated by large air carriers. Summary information on the number of on-time, delayed, canceled, and diverted flights appears in DOT’s monthly Air Travel Consumer Report, published about 30 days after the month’s end, as well as in summary tables posted on this website. Summary statistics and raw data are made available to the public at the time the Air Travel Consumer Report is released.
+
+You can download the datasets from the following links:
+
+Delayed_Flights.csv - https://drive.google.com/file/d/0B_Qjau8wv1KoWTVDUVFOdzlJNWM/view
+Airports.csv - https://drive.google.com/file/d/0B_Qjau8wv1KocDR3djk1Qm96Mmc/view
+
+These are 2 different datasets, i.e., Delayed_Flights.csv and Airports.csv. Let us understand one at a time.
+
+Delayed_Flights.csv Datasets
+
+There are 29 columns in this dataset. Some of them have been mentioned below:
+
+Year: 1987 – 2008
+Month: 1 – 12
+FlightNum: Flight number
+Canceled: Was the flight canceled?
+CancelleationCode: The reason for cancellation.
+For complete details, refer to this link https://drive.google.com/file/d/0B_Qjau8wv1KoTFljWHlxMDE0Szg/view
+
+Airports.csv Datasets
+
+iata: the international airport abbreviation code
+name of the airport
+city and country in which airport is located.
+lat and long: the latitude and longitude of the airport
+
+Problem Statement 1
+
+Find out the top 5 most visited destinations.
+
+step 1 - Load data and create relation
+
+delayedFlights = Load '/user/bbastola/Practice/DelayedFlights.csv' USING org.apache.pig.piggybank.storage.CSVExcelStorage(',','NO_MULTILINE','UNIX','SKIP_INPUT_HEADER');
+
+Step 2 - Extract required columns
+
+filteredData = FOREACH delayedFlights GENERATE $8, $9, $16, $17;
+
+
+
+Airport = Load '/user/bbastola/Practice/airports.csv' USING org.apache.pig.piggybank.storage.CSVExcelStorage(',','NO_MULTILINE','UNIX','SKIP_INPUT_HEADER');
+
+
+
+
