@@ -27,21 +27,65 @@ name of the airport
 city and country in which airport is located.
 lat and long: the latitude and longitude of the airport
 
-Problem Statement 1
+Problem Statement 1: Find out the top 5 most visited destinations.
 
-Find out the top 5 most visited destinations.
+	delayedFlights = Load '/user/bbastola/Practice/DelayedFlights.csv' USING org.apache.pig.piggybank.storage.CSVExcelStorage(',','NO_MULTILINE','UNIX','SKIP_INPUT_HEADER');
 
-step 1 - Load data and create relation
+	filteredData = FOREACH delayedFlights GENERATE (int)$1 as Year, (int)$10 as flightNum, (chararray)$17 as Origin, (chararray)$18 as Destination;
+	limitData = LIMIT filteredData 10;
+
+	filteredDataNotNull = FILTER filteredData by Destination is not null;
+
+	destinationGroupBy = GROUP filteredDataNotNull BY Destination;
+
+	groupedData = FOREACH destinationGroupBy GENERATE group, COUNT(filteredDataNotNull.Destination)
+
+	orderedDestination = ORDER groupedData by $1 Desc;
+
+	topFiveDestination = LIMIT orderedDestination 5;
+
+Now we have to join this relation with airpor relation to get the actual names
+
+	Airport = Load '/user/bbastola/Practice/airports.csv' USING org.apache.pig.piggybank.storage.CSVExcelStorage(',','NO_MULTILINE','UNIX','SKIP_INPUT_HEADER');
+
+	filteredAirport = FOREACH Airport GENERATE (chararray)$0 as IATA, (chararray)$2 as City, (chararray)$4 as Country;
+
+	dataJoin = JOIN topFiveDestination BY $0, filteredAirport BY $0;
+
+	dump dataJoin;
+
+Problem Statement 2: Which month has seen the most number of cancellations due to bad weather?
 
 delayedFlights = Load '/user/bbastola/Practice/DelayedFlights.csv' USING org.apache.pig.piggybank.storage.CSVExcelStorage(',','NO_MULTILINE','UNIX','SKIP_INPUT_HEADER');
 
-Step 2 - Extract required columns
+extractedData = FOREACH delayedFlights GENERATE (int)$2 as Month, (chararray)$10 as FlightNum, (int)$22 as Cancelled, (chararray)$23 as cancellationCode;
 
-filteredData = FOREACH delayedFlights GENERATE $8, $9, $16, $17;
+extractedDataNotNull = FILTER extractedData by Cancelled is not null;
+
+filteredData = FILTER extractedDataNotNull BY (Cancelled == 1 AND cancellationCode == 'B');
+
+groupByMonth = GROUP filteredData BY $0;
+
+groupedData = FOREACH groupByMonth GENERATE group, COUNT(filteredData.Cancelled);
+
+orderedData = ORDER groupedData BY $1 desc;
+
+FinalResult = LIMIT orderedData 1;
+
+dump FinalResult;
 
 
 
-Airport = Load '/user/bbastola/Practice/airports.csv' USING org.apache.pig.piggybank.storage.CSVExcelStorage(',','NO_MULTILINE','UNIX','SKIP_INPUT_HEADER');
+
+
+
+
+
+
+
+
+
+
 
 
 
