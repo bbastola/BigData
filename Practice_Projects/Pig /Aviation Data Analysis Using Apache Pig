@@ -56,23 +56,23 @@ Now we have to join this relation with airpor relation to get the actual names
 
 Problem Statement 2: Which month has seen the most number of cancellations due to bad weather?
 
-delayedFlights = Load '/user/bbastola/Practice/DelayedFlights.csv' USING org.apache.pig.piggybank.storage.CSVExcelStorage(',','NO_MULTILINE','UNIX','SKIP_INPUT_HEADER');
+	delayedFlights = Load '/user/bbastola/Practice/DelayedFlights.csv' USING org.apache.pig.piggybank.storage.CSVExcelStorage(',','NO_MULTILINE','UNIX','SKIP_INPUT_HEADER');
 
-extractedData = FOREACH delayedFlights GENERATE (int)$2 as Month, (chararray)$10 as FlightNum, (int)$22 as Cancelled, (chararray)$23 as cancellationCode;
+	extractedData = FOREACH delayedFlights GENERATE (int)$2 as Month, (chararray)$10 as FlightNum, (int)$22 as Cancelled, (chararray)$23 as cancellationCode;
 
-extractedDataNotNull = FILTER extractedData by Cancelled is not null;
+	extractedDataNotNull = FILTER extractedData by Cancelled is not null;
 
-filteredData = FILTER extractedDataNotNull BY (Cancelled == 1 AND cancellationCode == 'B');
+	filteredData = FILTER extractedDataNotNull BY (Cancelled == 1 AND cancellationCode == 'B');
 
-groupByMonth = GROUP filteredData BY $0;
+	groupByMonth = GROUP filteredData BY $0;
 
-groupedData = FOREACH groupByMonth GENERATE group, COUNT(filteredData.Cancelled);
+	groupedData = FOREACH groupByMonth GENERATE group, COUNT(filteredData.Cancelled);
 
-orderedData = ORDER groupedData BY $1 desc;
+	orderedData = ORDER groupedData BY $1 desc;
 
-FinalResult = LIMIT orderedData 1;
+	FinalResult = LIMIT orderedData 1;
 
-dump FinalResult;
+	dump FinalResult;
 
 
 
