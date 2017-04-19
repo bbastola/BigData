@@ -19,3 +19,18 @@ flume-ng version
 mkdir flume_labs
 cd flume_labs
 
+* to Start agent
+
+flume-ng agent --name a1 \
+--conf /home/bbastola/wlabs \
+--conf-file example.conf
+
+Open a new terminal and do the following
+
+nc gw01.itversity.com 44444
+Hello World, Testing
+flume
+example
+agent has been started
+blah blah blah
+
