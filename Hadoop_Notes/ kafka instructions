@@ -1,0 +1,42 @@
+# update .bash_profile with the following environment variables for the fist time
+export KAFKA_HOME=/usr/hdp/2.5.0.0-1245/kafka
+PATH=$PATH:$KAFKA_HOME/bin
+
+# Create topics
+kafka-topics.sh --create \
+  --zookeeper nn01.itversity.com:2181,nn02.itversity.com:2181,rm01.itversity.com \
+  --replication-factor 1 \
+  --partitions 1 \
+  --topic bbastola-kafka
+
+  kafka-topics.sh --create \
+  --zookeeper nn01.itversity.com:2181,nn02.itversity.com:2181,rm01.itversity.com \
+  --replication-factor 1 \
+  --partitions 1 \
+  --topic test
+
+# List all topics
+kafka-topics.sh --list \
+  --zookeeper nn01.itversity.com:2181,nn02.itversity.com:2181,rm01.itversity.com
+
+# List one topic
+kafka-topics.sh --list \
+  --zookeeper nn01.itversity.com:2181,nn02.itversity.com:2181,rm01.itversity.com \
+  --topic bbastola-kafka
+
+kafka-topics.sh --delete \
+  --zookeeper nn01.itversity.com:2181,nn02.itversity.com:2181,rm01.itversity.com \
+  --topic test
+
+# Command to produce messages, start typing after running this kakfa-console-producer command
+# The messages will be stored in topic kafkadg on the host where brokers are running
+kafka-console-producer.sh \
+  --broker-list nn02.itversity.com:6667 \
+  --topic bbastola-kafka
+
+# Open another shell and then run kafka-console-consumer command to see streaming messages
+kafka-console-consumer.sh \
+  --bootstrap-server nn02.itversity.com:6667 \
+  --zookeeper nn01.itversity.com:2181,nn02.itversity.com:2181,rm01.itversity.com \
+  --topic bbastola-kafka \
+  --from-beginning

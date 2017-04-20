@@ -1,0 +1,47 @@
+
+# flume - kafka, hdfs
+
+# Name the components on this agent
+fmp.sources = logsource
+fmp.sinks = kafkasink hdfssink
+fmp.channels = kafkachannel hdfschannel
+
+# Describe/configure the source
+fmp.sources.logsource.type = exec
+fmp.sources.logsource.command = tail -F /opt/gen_logs/logs/access.log
+
+# Describe the sink
+# Flume version is 1.5.2
+# Make sure all kafka related jar files are available under 
+# /usr/hdp/2.5.0.0-1245/flume/lib
+fmp.sinks.kafkasink.type = org.apache.flume.sink.kafka.KafkaSink
+fmp.sinks.kafkasink.brokerList = nn02.itversity.com:6667
+fmp.sinks.kafkasink.topic = bbastola-kafka
+
+# Describe hdfs sink
+fmp.sinks.hdfssink.type = hdfs
+fmp.sinks.hdfssink.hdfs.path = hdfs://nn01.itversity.com:8020/user/bbastola/flume
+
+# Use a channel which buffers events in memory for kafka
+fmp.channels.kafkachannel.type = memory
+fmp.channels.kafkachannel.capacity = 1000
+fmp.channels.kafkachannel.transactionCapacity = 100
+
+# Use a channel which buffers events in file for hdfssink
+fmp.channels.hdfschannel.type = file
+fmp.channels.hdfschannel.capacity = 1000
+fmp.channels.hdfschannel.transactionCapacity = 100
+
+# Bind the source and sink to the channel
+
+fmp.sources.logsource.channels = hdfschannel kafkachannel
+fmp.sinks.kafkasink.channel = kafkachannel 
+fmp.sinks.hdfssink.channel = hdfschannel
+
+# flume command to start the agent - flume-ng agent --name fmp --conf /home/bbastola/flume --conf-file bbastola_flume_mp.conf
+
+# Open another shell and then run kafka-console-consumer command to see streaming messages
+# kafka-console-consumer.sh --bootstrap-server nn02.itversity.com:6667  --zookeeper nn01.itversity.com:2181,nn02.itversity.com:2181,rm01.itversity.com --topic bbastola-kafka --from-beginning
+
+
+

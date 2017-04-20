@@ -1,4 +1,4 @@
-Spark and Scala workshop - GroupBy, SortBy, Rankings
+GroupBy, SortBy, Rankings
 
 Two types of sorting - globally and by key(departments for eg in a company)
 global - sorting done on large dataset, also called total sorting. it's single threaded - disadvantage
