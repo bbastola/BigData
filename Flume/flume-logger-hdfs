@@ -24,7 +24,7 @@ a1.sinks.loggersink.channel = loggerchannel
 
 #Describe the sink
 a1.sinks.hdfssink.type = hdfs
-a1.sinks.hdfssink.hdfs.path = hdfs://nn01.itversity.com:8020/user/dgadiraju/flume_example_%Y-%m-%d
+a1.sinks.hdfssink.hdfs.path = hdfs://nn01.itversity.com:8020/user/bbastola/flume_example_%Y-%m-%d
 a1.sinks.hdfssink.hdfs.fileType = DataStream
 a1.sinks.hdfssink.hdfs.rollInterval = 120
 a1.sinks.hdfssink.hdfs.rollSize = 10485760
