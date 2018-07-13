@@ -1,0 +1,64 @@
+git --version
+git config --global user.name "Binod Bastola"
+git config --global user.email "bbastola@live.com"
+git config --list
+
+git init                                --> Initialize git repository in current local directory
+git status
+touch .gitignore                        --> files that are inside this file will be ignored. 
+                                            Inside this file add the name of the file that you want to ignore.
+
+git add -A                              --> add all files to staging area
+git reset filename                      --> remove file from staging area
+git reset                               --> remove all files from staging area
+
+git commit -m "initail upload"          --> adds files from staging area to repository
+git log                                 --> gives the log information of recent commit
+
+git clone <url> <where to clone>        --> clonning a remote repository
+git remote -v                           --> view information regarding remote repository
+git branch -a                           --> list all branches in repository both local and remote
+git remote add <NewrepoName> <repoURL>  --  add remote to local repo
+git diff                                --> show changes that have been made to a file
+
+git pull origin master                  --> pulls latest changes from remote repository
+fit push origin master                  --> uploads all changes from local repository to remote
+
+git branch newBranchName                --> create a branch for desired feature/changes
+                                            It's common to create a branch to work on changes
+git branch                              --> list all local branches
+git checkout newBranchName              --> switching to newBranchName 
+git push -u origin newBranchName        --> upload latest changes to remote repo called "origin"
+
+git checkout master                     --> switched to master branch
+git pull origin master                  --> pulling lates changes
+git branch --merged                     --> list branched that have been merged
+git merge newBranchName                 --> merge master with newBranchName
+git push origin master                  --> merges all changes to master repo.
+
+git branch -d newBranchName             --> delete newBranchName once work is done from local repo
+git push origin --delete newBranchName  --> delete newBranchName from remote repo as well
+
+Common workflow
+
+1.  git branch creatingLoop
+2.  git checkout creatingLoop
+3.  make changes/write codes
+4.  git add -A 
+5.  git commit -m "created loops for application"
+6.  git push -u origin creatingLoop
+7.  git checkout master
+8.  git pull origin master
+9.  git merge creatingLoop
+10. git push origin master
+11. git branch -d creatingLoop
+12. git push origin --delete creatingLoop
+
+
+
+
+
+
+
+
+
