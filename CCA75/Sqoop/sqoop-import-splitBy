@@ -1,0 +1,10 @@
+// Things to remember for split-by
+// Column should be indexed
+// Values in the field should be sparsed(not thick or densed)
+// also often it should be sequence generated/evenly incremented
+// it should not have null Values
+
+//if split-by has to use non-numeric column than we have to add additional parameter
+// -Dorg.apache.sqoop.splitter.allow_text_splitter=true 
+
+
