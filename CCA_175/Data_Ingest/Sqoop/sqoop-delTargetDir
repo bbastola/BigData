@@ -1,0 +1,7 @@
+sqoop import \
+--options-file connection.props \
+--table order_items \
+--delete-target-dir \
+--target-dir /user/bbastola/sqoop_import/ \
+--num-mappers 2
+
