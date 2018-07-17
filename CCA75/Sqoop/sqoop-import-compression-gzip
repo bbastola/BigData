@@ -1,0 +1,17 @@
+sqoop import \
+-Dorg.apache.sqoop.splitter.allow_text_splitter=true \
+--connect jdbc:mysql://ms.itversity.com/retail_db \
+--username retail_user \
+--password itversity \
+--table orders \
+--target-dir /user/bbastola/sqoop_import/orders/ \
+--delete-target-dir \
+--split-by order_status \
+--compress
+
+//to view contents:
+hadoop fs -cat /user/bbastola/sqoop_import/orders/part* | zcat | head -n 20
+or
+// Copy compressed files form hdfs to local
+// hadoop fs -get /user/bbastola/sqoop_import/orders/* orders(orders is the name of new local directory)
+// gunzip filename.gz to uncompress.

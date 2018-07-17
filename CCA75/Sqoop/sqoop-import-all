@@ -1,0 +1,6 @@
+sqoop import-all-tables \
+--options-file ./connection.props \
+--warehouse-dir /user/bbastola/sqoop_imports/retail_db/ \
+--exclude-tables order_items_nopk \
+--compress \
+--compression-codec org.apache.hadoop.io.compress.SnappyCodec
