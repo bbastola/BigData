@@ -1,0 +1,54 @@
+//Column mapping is done when hive(source) table and mysql(destination) table's have different number of columns
+
+1. import required tables from mysql to hive
+
+sqoop import \
+--connect jdbc:mysql://ms.itversity.com/retail_db \
+--username retail_user \
+--password itversity \
+--hive-import \
+--hive-database bbastola_sqoop_import \
+--table orders \
+--create-hive-table \
+--num-mappers 1 
+
+sqoop import \
+--connect jdbc:mysql://ms.itversity.com/retail_db \
+--username retail_user \
+--password itversity \
+--hive-import \
+--hive-database bbastola_sqoop_import \
+--table order_items \
+--create-hive-table \
+--num-mappers 1
+
+//now we have to create hive table with business logic i.e calculate daily revenue
+hive> create table daily_revenue as
+select order_date, sum(order_item_subtotal) daily_revenue
+from orders join order_items on
+orders.order_id=order_items.order_item_order_id
+where order_date like '2013-07%'
+group by order_date;
+
+Note: Here hive has only two columns: order_date and daily_revenue.
+
+//now we have to create a mysql database where this results need to be exported
+
+mysql> create table bbastola_daily_revenue_demo(
+    total_revenue float(30),
+    order_date varchar(30),
+    description varchar(200)
+);
+
+Note: This Mysql table has three columns: total_revenue, order_date and description
+
+//now we can export to newly created sqoop table
+
+sqoop export \
+--connect jdbc:mysql://ms.itversity.com/retail_export \
+--username retail_user \
+--password itversity \
+--export-dir /apps/hive/warehouse/bbastola_sqoop_import.db/daily_revenue \
+--table bbastola_daily_revenue_demo \
+--columns order_date,total_revenue \  --> here the name of column should match destination column BUT the order in which it is written should match source.
+--input-fields-terminated-by "\001"

@@ -8,19 +8,7 @@ sqoop import \
 --num-mappers 1 \
 --fields-terminated-by "|" 
 
-//Now to do append
-
-sqoop import \
---connect jdbc:mysql://ms.itversity.com/hr_db \
---username hr_user \
---password itversity \
---target-dir /user/bbastola/sqoop_import/employees \
---query "select * from employees where \$CONDITIONS and hire_date > '1996-%'" \
---num-mappers 1 \
---fields-terminated-by "|" \
---append
-
-//Or we can use where clause 
+//Now to do incremental upload
 
 sqoop import \
 --connect jdbc:mysql://ms.itversity.com/hr_db \
@@ -28,7 +16,13 @@ sqoop import \
 --password itversity \
 --target-dir /user/bbastola/sqoop_import/employees \
 --table employees \
---where "hire_date > '1996-%'" \
+--where "hire_date between '1996-01-01' and '1996-12-31'" \
 --num-mappers 1 \
 --fields-terminated-by "|" \
---append
+--incremental append \
+--check-column hire_date
+
+// 3 arguments to keep in mind while doing incremental
+    1. --check-column
+    2. --incremental <mode> mode could be append or lastmodified
+    3. --last-value --> last value of check column field.

@@ -1,0 +1,12 @@
+sqoop import \
+--connect jdbc:mysql://ms.itversity.com/hr_db \
+--username hr_user \
+--password itversity \
+--target-dir /user/bbastola/sqoop_import/employees \
+--delete-target-dir \
+--query 'select * from employees where commission_pct is NULL AND $CONDITIONS' \
+--split-by hire_date \
+--null-non-string -1 \ --> this argument will replace all non-string null values with -1
+--fields-terminated-by "|" 
+
+//for string non values--> use --null-string argument
