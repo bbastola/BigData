@@ -1,0 +1,21 @@
+//set log level to error to stop displaying logs in console all the time
+sc.setLogLevel("ERROR")
+
+orderItems = sc.textFile("/public/retail_db/order_items")
+type(orderItems)
+
+orderItems.first()
+for i in orderItems.take(10): print i
+
+orderItems.toDebugString() --this will show DAG
+
+//parallelize sc
+
+l = range(1, 1000)
+lRdd = sc.parallelize(l)
+
+//load data from local file system and convert to RDD
+
+products = open("/data/retail_db/products").read().splitlines()
+productsRDD = sc.parallelize(products)
+

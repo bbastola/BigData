@@ -1,0 +1,11 @@
+//Datframe --> distributed collection with structure
+           --> Extension to RDD
+
+sqlContext --> Created using sparkContext(sc)
+           --> it's of type hiveContext
+
+load --> sqlContext.load("/public/retail_db_json/order_items", "json").show()
+read --> sqlContext.read.json("/public/retail_db_json/order_items").show()
+ try with orc, parquet, avro
+
+ 
