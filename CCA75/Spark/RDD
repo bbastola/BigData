@@ -16,6 +16,6 @@ lRdd = sc.parallelize(l)
 
 //load data from local file system and convert to RDD
 
-products = open("/data/retail_db/products").read().splitlines()
+products = open("/data/retail_db/products/part-00000").read().splitlines()
 productsRDD = sc.parallelize(products)
 

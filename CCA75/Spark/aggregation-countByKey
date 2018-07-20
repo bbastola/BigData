@@ -1,0 +1,14 @@
+
+Primarily used to preview data
+
+// Get count by status
+orders = sc.textFile("/public/retail_db/orders/part-00000")
+ordersMap = orders.map(lambda rec: (rec.split(",")[3], 1))
+ordersCountByStatus = ordersMap.countByKey()
+
+The output will be in python collection(dict) not RDD
+So if further spark operation needed then we have to convert to RDD.
+
+So reduceByKey, GroupByKey, aggregateByKey are used instead since 
+their outcome will be in RDD as they are transformation
+countByKey is action
