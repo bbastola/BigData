@@ -1,0 +1,10 @@
+//Get top N products by price - Global Ranking - SortByKey and take
+
+products = sc.textFile("/public/retail_db/products")
+productsFilter = products.filter(lambda rec: rec.split(",")[4] != "")
+productsMap = productsFilter.map(lambda rec: (float(rec.split(",")[4]), rec))
+productsSort = productsMap.sortByKey(False)
+for i in(productsSort.map(lambda rec: rec[1]).take(5)): print i
+
+
+

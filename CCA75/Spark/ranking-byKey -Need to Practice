@@ -1,0 +1,51 @@
+//Get Top N products by price within each category - By Key Ranking - groupByKey and flatMap
+
+products = sc.textFile("/public/retail_db/products")
+productsFilter = products.filter(lambda rec: rec.split(",")[4] != "")
+productsMap = productsFilter.map(lambda rec: (int(rec.split(",")[1]), rec))
+productsGroupByKey = productsMap.groupByKey()
+productsSorted = productsGroupByKey.flatMap(lambda rec: sorted(rec[1], key= lambda k: float(k.split(",")[4]), reverse=True)[:3]) --> it will give top 3 products for each category
+for i in productsSorted.take(5): print i
+
+//Get Top N prices products - Using Python collection
+
+products = sc.textFile("/public/retail_db/products")
+productsFilter = products.filter(lambda rec: rec.split(",")[4] != "")
+productsMap = productsFilter.map(lambda rec: (int(rec.split(",")[1]), rec))
+productsGroupByKey = productsMap.groupByKey()
+
+productsCategory = productsGroupByKey.filter(lambda rec: rec[0] == 59).first()
+productsSorted = sorted(productsCategory[1], key=lambda k: float(k.split(",")[4]), reverse=True)
+for i in productsSorted: print i
+productsSet = set(map(lambda rec: float(rec.split(",")[4]), productsSorted))
+productsSetSorted = sorted(productsSet, reverse=True)[:3]
+
+import itertools as it
+
+topNPricedProducts = it.takewhile(lambda p: float(p.split(",")[4]) in productsSetSorted, productsSorted)
+list(topNPricedProducts)
+
+
+//Create a function for this requirement
+
+def getTopNPricesPerCategory(productsCategory, topN):
+    productsSorted = sorted(productsCategory[1], key=lambda k: float(k.split(",")[4]), reverse=True)    
+    productsSet = set(map(lambda rec: float(rec.split(",")[4]), productsSorted))
+    productsSetSorted = sorted(productsSet, reverse=True)[:topN]
+    import itertools as it
+    return it.takewhile(lambda p: float(p.split(",")[4]) in productsSetSorted, productsSorted)
+list(getTopNPricesPerCategory(productsCategory, 3))  -->calling function
+
+topNPricedProducts = productsGroupByKey.flatMap(lambda p: getTopNPricesPerCategory(p, 3))
+for i in topNPricedProducts.collect(): print i
+
+
+
+
+
+
+
+
+
+
+

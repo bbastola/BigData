@@ -1,0 +1,7 @@
+//Get order items detail sorted by order_item_subtotal in descending for each order_id
+
+orderItems = sc.textFile("/public/retail_db/order_items")
+orderItemsMap = orderItems.map(lambda rec: (int(rec.split(",")[1]), (rec)))
+orderItemsGroupByKey = orderItemsMap.groupByKey()
+
+orderItemsSorted = orderItemsGroupByKey.flatMap(lambda rec: sorted(rec[1], key=lambda k: float(k.split(",")[4]) ,reverse=True))

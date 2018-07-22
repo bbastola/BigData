@@ -1,0 +1,25 @@
+GroupByKey is not a preferred method since it does't user combiner.
+It tries to process using single thread
+
+// Get Revenue for each order it
+
+orderItems = sc.textFile("/public/retail_db/order_items/part-00000")
+orderItemsMap = orderItems.map(lambda rec: (int(rec.split(",")[1]), float(rec.split(",")[4])))
+orderGroupByKey = orderItemsMap.groupByKey()
+
+                *the result will be in tuple of key and resultIterable form) - resultIterable is an array of values
+                    (2, <pyspark.resultiterable.ResultIterable object at 0x617b950>)
+                    (4, <pyspark.resultiterable.ResultIterable object at 0x617bb10>)
+                *to see the contents: we can use collection list api
+                l = orderGroupByKey.first()
+                l[0] - will give key
+                l[1] - will give <pyspark.resultiterable.ResultIterable object at 0x617b950>)
+
+                list(l[1])[0] - will give first value from the array
+                we can do other api like sum = sum(l[1])
+
+revenuePerOrderId = orderGroupByKey.map(lambda rec: (rec[0], round(sum(rec[1]),2)))
+for i in revenuePerOrderId.take(20): print i
+
+
+
