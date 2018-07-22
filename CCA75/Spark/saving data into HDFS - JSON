@@ -1,0 +1,11 @@
+orderItems = sc.textFile("/public/retail_db/order_items")
+orderItemsMap = orderItems.map(lambda rec: (int(rec.split(",")[1]), float(rec.split(",")[4])))
+from operator import add
+orderItemsReduceByKey = orderItemsMap.reduceByKey(add).map(lambda rec: (rec[0], round(rec[1], 2)))
+revenuePerOrderIdDF = orderItemsReduceByKey.toDF(schema=["order_id", "order_revenue"]) --> converting to dataFrame before saving as json
+revenuePerOrderIdDF.save("/user/bbastola/revenuePerOrderJSON", "json")
+OR
+revenuePerOrderIdDF.write.json("/user/bbastola/revenuePerOrderJSONWrite")
+
+
+
