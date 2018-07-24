@@ -1,0 +1,42 @@
+hive metastore - this is where metadata is stored
+//create database and tables of text file format - orders and order_items
+create database bbastola_retail_db_txt;
+use bbastola_retail_db_txt;
+set hive.metastore.warehouse.dir;
+
+create table orders (
+    order_id int,
+    order_date string,
+    order_customer_id int,
+    order_status string
+) row format delimited fields terminated by ','
+stored as textfile;
+
+load data local inpath '/data/retail_db/orders' into table orders;
+
+create table order_items (
+    order_item_id int,
+    order_item_order_id int,
+    order_items_product_id int,
+    order_item_quantity int,
+    order_item_subtotal float,
+    order_item_product_price float
+) row format delimited fields terminated by ','
+stored as textfile;
+
+load data local inpath '/data/retail_db/order_items' into table order_items;
+
+create table customers(
+    customer_id int,
+    customer_fname string,
+    customer_lname string,
+    customer_email string,
+    customer_password string,
+    customer_street string,
+    customer_city string,
+    customer_state string,
+    customer_zipcode string
+) row format delimited fields terminated by ','
+stored as textfile;
+
+load data local inpath '/data/retail_db/customers' into table customers;

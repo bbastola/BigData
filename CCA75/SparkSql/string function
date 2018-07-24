@@ -1,0 +1,40 @@
+frequenlty used string functions:
+
+substr or substring
+concat
+instr
+like
+length
+lcase or lower
+ucase or uppper
+initcap
+trim, ltrim, rtrim
+lpad, rpad
+cast
+split
+index
+
+select substr('Hello world, How are you', 14);
+select substring('Hello World', 1, 4);
+select substring('Hello World', -5);
+select substring('Hello World', -7, 3);
+
+select instr('Hello World, How are you', ' ');
+select instr('Hello World, How are you', 'World');
+
+select "Hello World, How are you" like 'Hello%';
+select length('Hello World, How are you');
+
+select trim(' hello world ');
+
+select lpad(2, 2, '0');  --> 02  --> primarily used to sort numbers, date etc
+select lpad(2, 12, '0'); --> 000000000002
+
+select cast("12" as int)
+select cast(substr(order_date, 6, 2)as int) from orders limit 10;
+
+select split("Hello how are you", ' ');
+select index(split("Hello how are you", ' '), 0); --> Hello
+
+
+

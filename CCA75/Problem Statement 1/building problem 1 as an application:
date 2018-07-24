@@ -1,0 +1,46 @@
+building problem 1 as an application:
+
+mkdir -p pythonDemo/retail/src/main/python
+cd pythonDemo/retail/src/mail/python
+vi dailyRevenuePerProduct.py
+
+from pyspark import sparkConf, sparkContext
+
+conf = sparkConf().setAppName("Daily Revenue Per Product").setMaster("yarn-client")
+sc = sparkContext(conf=conf)
+
+orders = sc.textFile("/public/retail_db/orders")
+order_items = sc.textFile("/public/retail_db/order_items")
+
+ordersFilter = orders.filter(lambda rec: rec.split(",")[3] in ["COMPLETE", "CLOSED"])
+
+ordersMap = ordersFilter.map(lambda rec: (int(rec.split(",")[0]), rec.split(",")[1]))
+orderItemsMap = order_items.map(lambda rec: (int(rec.split(",")[1]), (int(rec.split(",")[2]), float(rec.split(",")[4]))))
+
+itemsJoined = ordersMap.join(orderItemsMap)
+
+intermediateValue = itemsJoined.map(lambda rec: ((rec[1][0], int(rec[1][1][0])), rec[1][1][1]))
+
+dailyRevenuePerProduct = intermediateValue.reduceByKey(lambda x, y: round((x+y),2))
+
+dailyRevenuePerProductMap = dailyRevenuePerProduct.map(lambda r: (int(r[0][1]), (r[0][0], float(r[1]))))
+
+productsRaw = open("/data/retail_db/products/part-00000").read().splitlines()
+product = sc.parallelize(productsRaw)
+
+productMap = product.map(lambda rec: (int(rec.split(",")[0]), rec.split(",")[2]))
+
+dailyRevenuPerProductName = dailyRevenuePerProductMap.join(productMap)
+
+dailyRevenueSortedMap = dailyRevenuPerProductName.map(lambda r: ((r[1][0][0], -r[1][0][1]), r[1][0][0] + "," + str(r[1][0][1]) + "," + (r[1][1])))
+dailyRevenueSortByDate = dailyRevenueSortedMap.sortByKey()
+finalResult = dailyRevenueSortByDate.map(lambda rec: rec[1])
+finalResult.saveAsTextFile("/user/bbastola/daily_revenue_txt_python")
+
+spark-submit \
+--master yarn \
+--conf spark.ui.port=12888 \
+--num-executors 2 \
+--executor-memory 512M \
+/src/main/python/dailyRevenuePerProduct.py
+

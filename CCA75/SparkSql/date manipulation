@@ -1,0 +1,13 @@
+select current_date
+current_timestamp
+select date_format(current_date, 'y');
+select date_format(current_date, 'd');
+select date_format(current_date, 'm');
+select year(current_date);
+select month(current_date);
+
+select to_date(current_timestamp)
+select to_unix_timestamp(current_date)
+
+select date_add(order_date,20) from orders limit 10;  --> adds 10 days to existing dates.
+
