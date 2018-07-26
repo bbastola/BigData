@@ -1,0 +1,19 @@
+Details - Duration 40 minutes
+
+Choose language of your choice Python or Scala
+Data is available in HDFS file system under /public/crime/csv
+You can check properties of files using hadoop fs -ls -h /public/crime/csv
+Structure of data (ID,Case Number,Date,Block,IUCR,Primary Type,Description,Location Description,Arrest,Domestic,Beat,
+District,Ward,Community Area,FBI Code,X Coordinate,Y Coordinate,Year,Updated On,Latitude,Longitude,Location)
+
+5679860,HN487201,07/24/2007 11:10:00 PM,116XX S RACINE AVE,0560,ASSAULT,SIMPLE,RESIDENCE,false,true,0524,
+005,34,53,08A,1170418,1827643,2007,04/15/2016 08:55:02 AM,41.682532092,-87.651799575,"(41.682532092, -87.651799575)"
+
+File format - text file
+Delimiter - “,”
+Get monthly count of primary crime type, sorted by month in ascending and number of crimes per type in descending order
+Store the result in HDFS path /user/<YOUR_USER_ID>/solutions/solution01/crimes_by_type_by_month
+Output File Format: TEXT
+Output Columns: Month in YYYYMM format, crime count, crime type
+Output Delimiter: \t (tab delimited)
+Output Compression: gzip

@@ -1,0 +1,24 @@
+//completed orders that generates revenue over $1000 and calulate %of revenue each order id generate
+also sort by date ascending order, revenue descending order
+
+select o.order_id, o.order_date, o.order_status, oi.order_item_subtotal,
+round(sum(oi.order_item_subtotal) over (partition by order_id), 2) order_revenue,
+oi.order_item_subtotal/round(sum(oi.order_item_subtotal) over (partition by order_id), 2)
+from orders o join order_items oi on o.order_id = oi.order_item_order_id
+where order_status in ('COMPLETE', 'CLOSED')
+order by order_date;
+
+select * from(
+select o.order_id, o.order_date, o.order_status, oi.order_item_subtotal,
+sum(oi.order_item_subtotal) over (partition by o.order_id) total_revenue,
+oi.order_item_subtotal/sum(oi.order_item_subtotal) over (partition by o.order_id) revenue_pct,
+rank() over(partition by o.order_id order by oi.order_item_subtotal desc) rnk_revenue,
+dense_rank() over(partition by o.order_id order by oi.order_item_subtotal desc) dense_rnk_revenue,
+row_number() over(partition by o.order_id order by oi.order_item_subtotal desc) rn_orderby_Revenue,
+row_number() over (partition by o.order_id) rn_revenue,
+percent_rank() over(partition by o.order_id order by oi.order_item_subtotal desc) pct_rnk_Revenue
+from orders o join order_items oi on o.order_id = oi.order_item_order_id
+where o.order_status in ('COMPLETE', 'CLOSED')) q
+where total_revenue >=1000
+order by order_date, total_revenue desc;
+

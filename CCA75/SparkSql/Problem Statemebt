@@ -1,0 +1,11 @@
+Get daily revenue by product considering completed and closed orders.
+    Products have to be read from local file system. Dataframe need to be created.
+    Join orders, order_items
+    Filter on order_status
+
+Data need to be sorted by ascending order by date and then descending order by revenue computed for each product for each day.
+    sort data by order_date in ascending order and then daily revenue per product in descending order
+
+Use Hive and store the output to hive database
+Your_User_id_daily_revenue
+    save above output into hive table using orc format

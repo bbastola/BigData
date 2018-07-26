@@ -1,0 +1,24 @@
+pyspark --master yarn conf spark.ui.port=12888 --num-executors 1 --executor-memory 2G
+
+sqlContext.sql('select * from bbastola_employee.employee_contract')  --> This will only convert to dataFrame
+sqlContext.sql('select * from bbastola_employee.employee_contract').show()  --> This will show the results
+sqlContext.sql('select * from bbastola_employee.employee_contract').printSchema()  --> This will print table schema
+
+To create dataFrame from RDD:
+1. import Row package
+    from pyspark.sql import Row  
+2. create/load data as RDD
+    ordersRDD = sc.textFile('/public/retail_db/orders')
+3. Define a structure for the data by applying Row api against Map
+    ordersDF = ordersRDD.map(lambda rec: Row(order_id=int(rec.split(",")[0]), order_date=rec.split(",")[1], order_customer_id=int(rec.split(",")[2]), order_status=rec.split(",")[3])).toDF()
+4. Register temp table
+    ordersDF.registerTempTable("ordersDF_table")
+5. Run query against temp table
+    sqlContext.sql('select * from ordersDF_table").show()
+
+
+
+
+
+    
+

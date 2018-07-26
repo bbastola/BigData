@@ -1,0 +1,25 @@
+Flume: 
+
+agent name: It's the name you give to the agent
+agent has 3 components: 1. sources
+                        2. channels
+                        3. sinks
+
+agent has to be confiured in following ways:
+1. assign names to the agent components
+   a1.sources = r1  --> a1: agent name, r1 = sources name
+2. describe/configure the source
+    a1.sources.r1.type
+    and other required configs 
+3. describe/configure sink
+    a1.sink.k1.type
+    and other required configs
+4.  describe/configure channel
+    a1.channel.c1.type
+    and other required configs
+5.  Bind the source and sink to the channel
+    a1.sources.r1.channels = c1
+    a1.sinks.k1.channel = c1    
+
+to Start agent: 
+flume-ng agent --name a1 --conf-file <<name of the file where flume agent is configured>>

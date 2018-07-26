@@ -1,0 +1,13 @@
+ID,Case Number,Date,Block,IUCR,Primary Type,Description,Location Description,Arrest,Domestic,Beat,
+District,Ward,Community Area,FBI Code,X Coordinate,Y Coordinate,Year,Updated On,Latitude,Longitude,Location
+
+5679860,HN487201,07/24/2007 11:10:00 PM,116XX S RACINE AVE,0560,ASSAULT,SIMPLE,RESIDENCE,false,true,0524,
+005,34,53,08A,1170418,1827643,2007,04/15/2016 08:55:02 AM,41.682532092,-87.651799575,"(41.682532092, -87.651799575
+
+date, primary type, crime count
+
+crimeDataRDD = sc.textFile("/public/crime/csv")
+header = crimeDataRDD.first()
+crimeDataNoHeader = crimeDataRDD.filter(lambda rec: rec != header)
+
+crimeDataMap = crimeDataNoHeader.map(lambda rec: (rec.split(",")[2], rec.split(",")[5]))
