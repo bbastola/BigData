@@ -1,0 +1,22 @@
+crimeDataRDD = sc.textFile("/public/crime/csv")
+header = crimeDataRDD.first()
+crimeDataNoHeader = crimeDataRDD.filter(lambda rec: rec != header)
+
+def getYYYYMM(rec):
+  data = rec.split(",")
+  date = data[2]
+  YYYY = date.split(" ")[0][6:]
+  MM = date.split(" ")[0][:2]
+  crimeType = data[5]
+  return(((int(YYYY+MM)), crimeType), 1)
+
+crimeDataMap = crimeDataNoHeader.map(lambda rec: getYYYYMM(rec))
+crimeCount = crimeDataMap.reduceByKey(lambda x, y: x + y)
+crimeMap = crimeCount.map(lambda rec: ((rec[0][0], -rec[1]), str(rec[0][0]) + "\t" + str(rec[1]) + "\t" + rec[0][1]))
+crimeCountSort = crimeMap.sortByKey()
+crimeDataSorted = crimeCountSort.map(lambda rec: rec[1])
+crimeDataSorted.coalesce(2).saveAsTextFile("/user/bbastola/solutions/solution01/crimes_by_type_by_month", compressionCodecClass="org.apache.hadoop.io.compress.GzipCodec")
+
+
+
+
