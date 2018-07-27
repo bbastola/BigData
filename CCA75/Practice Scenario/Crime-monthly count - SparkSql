@@ -19,5 +19,23 @@ Output Columns: Month in YYYYMM format, crime count, crime type
 Output Delimiter: \t (tab delimited)
 Output Compression: gzip
 
+Solution:
 
+crimeData = sc.textFile("/public/crime/csv")
+header = crimeData.first()
+crimeDataNoHeader = crimeData.filter(lambda rec: rec!=header)
 
+from pyspark.sql import Row
+crimeDataDF = crimeDataNoHeader.map(lambda rec: Row(date=rec.split(",")[2], crime_type=rec.split(",")[5])).toDF()
+crimeDataDF.registerTempTable("crime_table")
+sqlContext.sql("select * from crime_table limit 10").show()
+
+finalResult = sqlContext.sql("select concat(substr(date, 7, 4), substr(date, 1, 2)) crime_Date, count(1) crime_count, \
+crime_type from crime_table \
+group by concat(substr(date, 7, 4), substr(date, 1, 2)), crime_type \
+order by crime_Date, crime_count desc")
+
+finalResult.rdd.map(lambda rec: (str(rec[0]) + "\t" + str(rec[1]) + "\t" + str(rec[2]))).coalesce(2).saveAsTextFile("/user/bbastola/solutions/solutions01/crimes_by_type_month_SQL", compressionCodecClass="org.apache.hadoop.io.compress.GzipCodec")
+
+To check from spark shell:
+for i in sc.textFile("/user/bbastola/solutions/solutions01/crimes_by_type_month_SQL").take(10): print i
