@@ -2,7 +2,7 @@
 
 file=$1
 delim=$2
-
-awk -F"$delim" '{print>$1}' $file
+format=".dat"
+awk -F"$delim" '{print>$1$format}' $file
 
 
