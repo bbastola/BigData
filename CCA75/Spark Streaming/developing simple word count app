@@ -1,0 +1,32 @@
+//developing simple word count app
+
+vi /src/main/python/streamingWordCount.py
+
+
+from pyspark import SparkContext, SparkConf
+from pyspark.streaming import StreamingContext
+
+conf = SparkConf().setAppName("Streaming word count").setMaster("yarn-client")
+sc = SparkContext(conf=conf)
+ssc = StreamingContext(sc, 15). --> 2nd argument for StreamingContext is the time frequency for a program to process a data. Here it's 15 sec)
+
+lines = ssc.socketTextStream("gw02.itversity.com", 19999). -> this socketTextStream api will read data from webserver running on a host:19999
+type(lines) -> this will give you dStream
+
+words = lines.flatMap(lambda word: word.split(" "))
+wordsTuple = words.map(lambda word: (Word, 1))
+wordsCount = wordsTuple.reduceByKey(lambda x, y: x +y)
+
+wordsCount.pprint()
+
+ssc.start()
+ssc.awaitTermination()
+
+
+//to run
+nc -lk gw02.itversity.com 19999
+//open another terminal
+spark-submit --master yarn --conf spark.ui.port=12888 \
+src/main/python/streamingWordCount.py
+
+//go to terminal where nc is running and start typing words

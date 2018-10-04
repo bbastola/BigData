@@ -1,0 +1,37 @@
+Import all tables from mysql database into hdfs as avro data files. use compression and the compression codec should be snappy. data warehouse directory should be retail_stage.db
+
+sqoop import-all-tables \
+--connect jdbc:mysql://quickstart.cloudera:3306/retail_db \
+--username retail_dba \
+--password cloudera \
+--warehouse-dir /user/hive/warehouse/retail_stage.db \
+--as-avrodatafile \
+--compress \
+--compression-codec "org.apache.hadoop.io.compress.SnappyCodec" \
+--num-mappers 1
+
+Create a metastore table that should point to the orders data imported by sqoop job above. Name the table orders_sqoop. 
+
+hadoop fs -get /user/hive/warehouse/retail_stage.db/orders/part-m-00000.avro
+avro-tools getschema part-m-00000.avro > orders.avsc
+hadoop fs -mkdir /user/hive/schemas
+hadoop fs -ls /user/hive/schemas/order
+hadoop fs -copyFromLocal orders.avsc /user/hive/schemas/order
+
+Launch HIVE using 'hive' command in a separate terminal
+
+Below HIVE command will create a table pointing to the avro data file for orders data
+
+create external table orders_sqoop
+STORED AS AVRO
+LOCATION '/user/hive/warehouse/retail_stage.db/orders'
+TBLPROPERTIES ('avro.schema.url'='/user/hive/schemas/order/orders.avsc')
+
+Write query in hive that shows all orders belonging to a certain day. This day is when the most orders were placed. select data from orders_sqoop. 
+
+select to_date(from_unixtime(cast(order_date/1000 as int))) as Date, order_status, count(order_status) as total_orders from orders_sqoop
+group by to_date(from_unixtime(cast(order_date/1000 as int))), order_status
+order by Date, total_orders desc limit 5;
+
+
+

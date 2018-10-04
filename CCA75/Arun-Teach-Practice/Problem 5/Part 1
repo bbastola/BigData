@@ -1,0 +1,23 @@
+Using sqoop, import products_replica table from MYSQL into hdfs such that fields are separated by a '|' and lines are separated by '\n'. Null values are represented as -1 for numbers and "NOT-AVAILABLE" for strings. Only records with product id greater than or equal to 1 and less than or equal to 1000 should be imported and use 3 mappers for importing. The destination file should be stored as a text file to directory  /user/cloudera/problem5/products-text.
+
+sqoop import \
+--connect jdbc:mysql://quickstart.cloudera:3306/retail_db \
+--username retail_dba \
+--password cloudera \
+--table products_replica \
+--target-dir /user/cloudera/problem5/products-text \
+--fields-terminated-by "|" \
+--lines-terminated-by "\n" \
+--null-string "NOT-AVAILABLE" \
+--null-non-string -1 \
+--num-mappers 3 \
+--where "product_id between 1 and 1000" 
+
+
+sqoop eval \
+--connect jdbc:mysql://quickstart.cloudera:3306/retail_db \
+--username retail_dba \
+--password cloudera \
+--query "select * from products_replica limit 5"
+
+

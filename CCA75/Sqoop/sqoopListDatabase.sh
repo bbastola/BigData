@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+l#! /usr/bin/bash
 
 export CONNECT=jdbc:mysql://ms.itversity.com
 export USER=retail_user

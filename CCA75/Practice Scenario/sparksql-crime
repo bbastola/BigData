@@ -1,0 +1,33 @@
+u'5679862,HN487108,07/24/2007 10:11:00 PM,054XX S ABERDEEN ST,1320,CRIMINAL DAMAGE,TO VEHICLE,STREET,false,false,0934,009,16,61,14,1169912,1868555,2007,04/15/2016 08:55:02 AM,41.794811309,-87.652466989,"(41.794811309, -87.652466989)"'
+
+ Get monthly count of primary crime type, sorted by month in ascending and number of crimes per type in descending order
+Store the result in HDFS path /user/<YOUR_USER_ID>/solutions/solution01/crimes_by_type_by_month
+
+crimeData = sc.textFile("/public/crime/csv")
+header = crimeData.first()
+crimeDataNoHeader = crimeData.filter(lambda rec: rec!=header)
+
+def getYYYYMM(rec):
+  data = rec.split(",")
+  date = data[2]
+  YYYY = date.split(" ")[0][6:]
+  MM = date.split(" ")[0][:2]
+  crimeType = data[5]
+  return((int(YYYY+MM)), crimeType)
+
+crimeMap = crimeDataNoHeader.map(lambda r: getYYYYMM(r))
+
+from pyspark.sql import Row
+
+crimeDF = crimeMap.map(lambda r: Row(date=r[0], crime_type=r[1])).toDF()
+
+crimeDF.registerTempTable("crime_table")
+
+finalResult = sqlContext.sql("select date, crime_type, count(*) count \
+from crime_table \
+group by date, crime_type \
+order by date, count desc")
+
+finalResult.rdd.coalesce(4).saveAsTextFile("/user/bbastola/solutions/solution01/crime_by_month","org.apache.hadoop.io.compress.GzipCodec")
+
+

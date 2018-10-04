@@ -1,0 +1,6 @@
+avro
+
+//read avro as dataframe
+
+sqlContext.read.format("org.apache.spark.avro").load("location of avro file")
+

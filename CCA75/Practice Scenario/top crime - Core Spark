@@ -1,0 +1,32 @@
+
+Data is available in HDFS file system under /public/crime/csv
+
+Structure of data (ID,Case Number,Date,Block,IUCR,Primary Type,Description,Location Description,Arrest,Domestic,Beat,District,Ward,Community Area,FBI Code,X Coordinate,Y Coordinate,Year,Updated On,Latitude,Longitude,Location)
+
+Get monthly count of primary crime type, sorted by month in ascending and number of crimes per type in descending order
+
+Store the result in HDFS path /user/<YOUR_USER_ID>/solutions/solution01/crimes_by_type_by_month
+Output File Format: TEXT
+Output Columns: Month in YYYYMM format, crime count, crime type
+Output Delimiter: \t (tab delimited)
+Output Compression: gzip
+
+month YYYYMM
+count(crime type)
+
+crime_data = sc.textFile("/public/crime/csv")
+header = crime_data.first()
+crimeNoHeader = crime_data.filter(lambda r: r != header)
+
+crimeDataExtract = crimeNoHeader.map(lambda r: (r.split(",")[2], r.split(",")[5]))
+crimeDataMap = crimeDataExtract.map(lambda t: ((t[0].split()[0][-4:] + t[0].split()[0][:2]), t[1]))
+crimeReduce = crimeDataMap.map(lambda r: ((r[0], r[1]), 1)).reduceByKey(lambda x, y: x+y)
+
+crimeCount = crimeReduce.map(lambda r: ((r[0][0],-r[1]), str(r[0][0])+"\t"+str(r[1])+"\t"+str(r[0][1]))).sortByKey()
+finalResult = crimeCount.map(lambda r: r[1])
+finalResult.saveAsTextFile("/user/bbastola/solutions/solution01/crime_latest","org.apache.hadoop.io.compress.GzipCodec")
+
+
+
+
+

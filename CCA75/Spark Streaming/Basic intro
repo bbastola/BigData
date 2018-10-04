@@ -1,0 +1,17 @@
+streamingContext needs to be created
+from pyspark.streaming import streamingContext
+ssc = streamingContext(sc)
+
+
+dstream = discretized streams --> collection of rdd's over a period of time in a regular interval
+window = period of time
+interval = how often the data are passed
+
+
+
+65.198.99.244 - - [28/Jul/2018:12:14:29 -0800] "GET /department/outdoors/products HTTP/1.1" 200 1092 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.77.4 (KHTML, like Gecko) Version/7.0.5 Safari/537.77.4"
+
+
+
+
+

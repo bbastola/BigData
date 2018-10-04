@@ -1,0 +1,13 @@
+crimeData = sc.textFile("/public/crime/csv")
+from pyspark.sql import Row
+crimeMap = crimeData.map(lambda r: Row(location=r.split(",")[7], crime_type=r.split(",")[5])).toDF()
+
+Get top 3 crime types based on number of incidents in RESIDENCE area using “Location Description"
+
+crimeMap.registerTempTable("crime_table")
+
+crimeTop3 = sqlContext.sql("select crime_type, count(crime_type) crime_count \
+from crime_table where location = 'RESIDENCE' group by crime_type \
+order by crime_count desc limit 3")
+
+crimeTop3.toJSON().saveAsTextFile("/user/bbastola/solutions/solution03/RESIDENCE_AREA_CRIMINAL_TYPE_DATA_latest")

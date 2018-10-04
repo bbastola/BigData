@@ -1,0 +1,25 @@
+Arun Teaches - Problem 3
+
+1. Import all tables from mysql database into hdfs as avro data files. use compression and the compression codec should be snappy. data warehouse directory should be retail_stage.db
+
+sqoop import-all-tables \
+--connect jdbc:mysql://quickstart.cloudera:3306/retail_db \
+--username retail_dba \
+--password cloudera \
+--warehouse-dir /user/cloudera/retail_stage.db \
+--as-avrodatafile \
+--compress \
+--compression-codec "org.apache.hadoop.io.compress.SnappyCodec" \
+--exclude-tables products_replica,products_external
+
+2. Create a metastore table that should point to the orders data imported by sqoop job above. Name the table orders_sqoop.
+
+hadoop fs -mkdir /user/hive/schemas/orders
+hadoop fs -copyFromLocal orders.avsc /user/hive/schemas/orders
+
+create external table orders_sqoop
+stored as avro
+location '/user/cloudera/retail_stage.db/orders'
+tblproperties("avro.schema.url"="/user/hive/schemas/orders/orders.avsc")
+
+3. Write query in hive that shows all orders belonging to a certain day. This day is when the most orders were placed. select data from orders_sqoop. 

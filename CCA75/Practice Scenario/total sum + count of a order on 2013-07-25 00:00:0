@@ -1,0 +1,20 @@
+total revenue + count of a orders completed by month
+
+orders = open("/home/cloudera/retail_db/orders/part-00000").read().splitlines()
+orderItems = open("/home/cloudera/retail_db/order_items/part-00000").read().splitlines()
+
+ordersRDD = sc.parallelize(orders)
+orderItemsRDD = sc.parallelize(orderItems)
+
+ordersFilter = ordersRDD.filter(lambda rec: (rec.split(",")[3] in ["CLOSED","COMPLETE"]))
+ordersMap = ordersFilter.map(lambda rec: (int(rec.split(",")[0]), rec.split(",")[1]))
+
+orderItemsMap = orderItemsRDD.map(lambda rec: (int(rec.split(",")[1]), float(rec.split(",")[4])))
+
+ordersJoinItems = ordersMap.join(orderItemsMap)
+ordersJoinMap = ordersJoinItems.map(lambda rec: (rec[1][0][:7], rec[1][1]))
+ordersJoinMapped = ordersJoinMap.map(lambda rec: (int(rec[0][:4] + rec[0][5:]), round(rec[1])))
+
+ordersSumCount = ordersJoinMapped.combineByKey(lambda x: (x, 1), lambda y, x: (y[0] + x, y[1] + 1), lambda y, z: (y[0] + z[0], y[1] + z[1]))
+
+

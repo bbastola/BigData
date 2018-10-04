@@ -4,7 +4,6 @@ select * from customers c join orders o on c.customer_id = o.order_customer_id l
 
 //customer details of who have NOT placed orders
 
-select count(1) from customers c left outer join orders o on c.customer_id = o.customer_id
-where o.order_id is null;
+select count(1) from customers c left outer join orders o on c.customer_id = o.customer_id where o.order_id is null;
 OR 
 select count(*) from customers c where c.customer_id not in (select distinct order_customer_id from orders);

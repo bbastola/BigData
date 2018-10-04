@@ -1,4 +1,4 @@
-sqoop import \
+ sqoop import \
 -Dorg.apache.sqoop.splitter.allow_text_splitter=true \
 --connect jdbc:mysql://ms.itversity.com/retail_db \
 --username retail_user \

@@ -1,0 +1,12 @@
+problem 4 - part 4
+
+Transform/Convert data-files at  /user/cloudera/problem5/json-gzip and store the converted file at the following locations and file formats
+
+save the data to as comma separated text using gzip compression at   /user/cloudera/problem5/csv-gzip
+
+jsonData = sqlContext.read.json("/user/cloudera/problem5/json-gzip")
+jsonData.map(lambda r: (str(r[0])+","+str(r[1])+","+str(r[2])+","+r[3])).saveAsTextFile("/user/cloudera/problem5/csv-gzip","org.apache.hadoop.io.compress.GzipCodec")
+
+
+Using spark access data at /user/cloudera/problem5/sequence and stored it back to hdfs using no compression as ORC file to HDFS to destination /user/cloudera/problem5/orc 
+

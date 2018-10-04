@@ -6,7 +6,7 @@ sqoop import \
 
 when using free form --query
 1. no --table argument needed
-2. "AND $CONDITIONS" argument needed at the end of the query
+2. "AND $CONDITIONS" argument needed at the end of where conditionsi
 3. --split-by argument needed if importing in paralell i.e. using more than 1 mapper
 4. else specify --num-mappers 1
 

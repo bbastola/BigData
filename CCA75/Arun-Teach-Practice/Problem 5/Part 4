@@ -1,0 +1,13 @@
+Using sqoop merge data available in /user/cloudera/problem5/products-text-part1 and /user/cloudera/problem5/products-text-part2 to produce a new set of files in /user/cloudera/problem5/products-text-both-parts
+
+
+sqoop merge \
+--class-name products_replica \
+--jar-file /tmp/sqoop-cloudera/compile/791fe270e818c618eb1383e75e5c403b/products_replica.jar \
+--new-data /user/cloudera/problem5/products-text-part2 \
+--onto /user/cloudera/problem5/products-text-part1 \
+--target-dir /user/cloudera/problem5/products-text-both-parts \
+--merge-key product_id
+
+
+

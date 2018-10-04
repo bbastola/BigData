@@ -1,4 +1,4 @@
-//user split-by parameter if the tables doesn't have primary key column.
+//use split-by parameter if the tables doesn't have primary key column.
 
 // Things to remember for split-by
 // Column should be indexed

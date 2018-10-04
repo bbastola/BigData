@@ -1,0 +1,43 @@
+Using sqoop do the following. Read the entire steps before you create the sqoop job.
+create a sqoop job Import Products_replica table as text file to directory /user/cloudera/problem5/products-incremental. Import all the records.
+insert three more records to Products_replica from mysql
+run the sqoop job again so that only newly added records can be pulled from mysql
+insert 2 more records to Products_replica from mysql
+run the sqoop job again so that only newly added records can be pulled from mysql
+Validate to make sure the records have not be duplicated in HDFS
+
+sqoop job --create bbastola_sqoop_job \
+-- import \
+--connect jdbc:mysql://quickstart.cloudera:3306/retail_db \
+--username retail_dba \
+--password cloudera \
+--table products_replica \
+--target-dir /user/cloudera/problem5/products-incremental \
+--check-column product_id \
+--incremental append \
+--last-value 0
+
+sqoop job --list
+sqoop job --exec bbastola_sqoop_job
+
+1502,Binod jutta Nike,awesome  shoes,89.99,http://images.jutta.com,1,WEAK
+1501,2,'socks','awesome socks',9.99,'http://images.socks.com',1,'STRONG'
+
+
+
+sqoop eval \
+--connect jdbc:mysql://quickstart.cloudera:3306/retail_db \
+--username retail_dba \
+--password cloudera \
+--query "insert into products_replica values(1503,1,'pants','awesome \ pants',109.99,'http://images.pants.com',1,'STRONG')"
+
+sqoop job --create bbastola_sqoop_job_lastmodified \
+-- import \
+--connect jdbc:mysql://quickstart.cloudera:3306/retail_db \
+--username retail_dba \
+--password cloudera \
+--table products_replica \
+--target-dir /user/cloudera/problem5/products-incremental-lastModified \
+--check-column product_id \
+--incremental lastmodified \
+--last-value 0

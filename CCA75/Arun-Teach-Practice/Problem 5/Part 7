@@ -1,0 +1,28 @@
+insert 2 more records into products_hive table using hive. 
+
+create table in mysql using below command   
+create table products_external (product_id int(11) primary Key, product_category_id int(11), product_name varchar(100), product_description varchar(100), product_price float, product_impage varchar(500), product_grade int(11), product_sentiment varchar(100));
+
+export data from products_hive (hive) table to (mysql) products_external table. 
+insert 2 more records to Products_hive table from hive
+
+export data from products_hive table to products_external table. 
+Validate to make sure the records have not be duplicated in mysql table
+
+
+
+sqoop export \
+--connect jdbc:mysql://quickstart.cloudera:3306/retail_db \
+--username retail_dba \
+--password cloudera \
+--export-dir /user/hive/warehouse/problem5.db/products_hive \
+--fields-terminated-by '\001' \
+--input-null-string "null" \
+--update-mode allowinsert \
+--update-key product_id \
+--columns "product_id,product_category_id,product_name,product_description,product_price,product_impage,product_grade,product_sentiment" \
+--table products_external 
+
+insert into products_hive values(1505,1,'Cloudera hadoop','Books',9.99,'http://images.pants.com',2,'WEAK');
+insert into products_hive values(1506,1,'hadoop','Books',19.99,'http://images.books.com',2,'STRONG');
+
