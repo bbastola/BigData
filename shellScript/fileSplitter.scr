@@ -1,0 +1,7 @@
+#!/bin/bash
+
+file=$1
+
+awk -F\^ '{print>$1}' $file
+
+
