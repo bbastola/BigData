@@ -1,8 +1,0 @@
-#!/bin/bash
-
-file=$1
-delim=$2
-format=".dat"
-awk -F"$delim" '{print>$1$format}' $file
-
-

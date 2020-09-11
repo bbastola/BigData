@@ -1,8 +1,0 @@
-sqlContext.sql("use bbastola_retial_db")
-sqlContext.sql("show tables").show()
-sqlContext.sql("select * from orders limit 10").show()
-
-
-hive> describe function length ---> to see detail about functions
-
-hive> select length('Hello World');

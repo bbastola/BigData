@@ -1,6 +1,0 @@
-sqoop import \
---options-file connection.props \
---table order_items \
---columns "order_item_id, order_item_quantity, order_item_product_price" \
---target-dir /user/bbastola/sqoop_import/order_items \
---delete-target-dir \

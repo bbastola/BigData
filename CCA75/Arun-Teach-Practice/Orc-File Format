@@ -1,8 +1,0 @@
-Saving to ORC - Important
-
-Using spark access data at /user/cloudera/problem5/sequence and stored it back to hdfs using no compression as ORC file to HDFS to destination /user/cloudera/problem5/orc 
-
-sequenceData = sc.sequenceFile("/user/cloudera/problem5/sequence","org.apache.hadoop.io.Text","org.apache.hadoop.io.Text")
-sequenceData.map(lambda x: x[1])
-
-orcFile = sequenceData.map(lambda x: x[1]).map(lambda x: Row(oi=int(x.split(",")[0]),date=str(x.split(",")[1]),oc_id=int(x.split(",")[2]),ord_status=str(x.split(",")[3]))).toDF().write.orc("/user/cloudera/problem5/orc")
